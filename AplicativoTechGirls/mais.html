@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio Seguro - Mais Opções</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-body">
+    <button id="quickExitBtn" class="quick-exit-btn" aria-label="Sair rapidamente do site">
+        Saída Rápida (Esc)
+    </button>
+
+    <main class="app-container">
+
+        <header class="app-header header-cinza">
+            <div class="header-title-row">
+                <a href="dashboard.html" class="btn-voltar-icon"><i class="fa-solid fa-arrow-left"></i></a>
+                <h2>Configurações</h2>
+            </div>
+        </header>
+
+        <section class="mais-content">
+
+            <div class="perfil-card">
+                <div class="perfil-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="perfil-info">
+                    <h3>Maria (Apelido)</h3>
+                    <p>PIN de Segurança: ••••</p>
+                </div>
+                <button class="btn-editar-perfil" title="Editar Perfil"><i class="fa-solid fa-pen"></i></button>
+            </div>
+
+            <hr class="divisor">
+
+            <div class="opcoes-lista">
+
+                <div class="opcao-item camuflagem-destaque">
+                    <div class="opcao-icone bg-dark"><i class="fa-solid fa-mask"></i></div>
+                    <div class="opcao-texto">
+                        <h4>Camuflar Aplicativo</h4>
+                        <p>Transforma o visual do app em um site de receitas para despistar curiosos.</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="toggleCamuflagem">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <button class="opcao-item btn-opcao">
+                    <div class="opcao-icone bg-grey"><i class="fa-solid fa-file-shield"></i></div>
+                    <div class="opcao-texto">
+                        <h4>Privacidade e Termos</h4>
+                        <p>Como protegemos seus dados.</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right seta"></i>
+                </button>
+
+                <button class="opcao-item btn-opcao" id="btnLimparRastros">
+                    <div class="opcao-icone bg-orange"><i class="fa-solid fa-broom"></i></div>
+                    <div class="opcao-texto">
+                        <h4>Limpar Rastros</h4>
+                        <p>Apaga buscas e dados salvos neste aparelho.</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right seta"></i>
+                </button>
+
+                <button class="opcao-item btn-opcao" id="btnSairConta">
+                    <div class="opcao-icone bg-red"><i class="fa-solid fa-right-from-bracket"></i></div>
+                    <div class="opcao-texto">
+                        <h4 class="text-red">Sair da Conta</h4>
+                        <p>Voltar para a tela de login inicial.</p>
+                    </div>
+                </button>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="mais.js"></script>
+</body>
+
+</html>

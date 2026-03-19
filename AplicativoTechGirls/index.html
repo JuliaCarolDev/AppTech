@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio Seguro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="quickExitBtn" class="quick-exit-btn" aria-label="Sair rapidamente do site">
+        Saída Rápida (Esc)
+    </button>
+
+    <main class="login-container">
+        <div class="login-card">
+            <h1>Apoio Seguro</h1>
+            <p>Um espaço seguro e discreto para você.</p>
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="nickname">Apelido ou Nome de Acesso</label>
+                    <input type="text" id="nickname" placeholder="Como deseja ser chamada?" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="pin">PIN de Segurança (4 dígitos)</label>
+                    <input type="password" id="pin" placeholder="****" inputmode="numeric" maxlength="4" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Entrar com Segurança</button>
+            </form>
+
+            <a href="#" class="guest-link">Quero apenas ler informações (Acesso Anônimo)</a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

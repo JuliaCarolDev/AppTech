@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio Seguro - Início</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-body">
+    <button id="quickExitBtn" class="quick-exit-btn" aria-label="Sair rapidamente do site">
+        Saída Rápida (Esc)
+    </button>
+
+    <main class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <h2>Seus direitos de forma simples e segura</h2>
+                <button id="btnSobreNos" class="btn-sobre-nos">Sobre nós</button>
+            </div>
+        </header>
+
+        <div class="search-container">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Ex: pensão, assédio, medida protetiva...">
+            </div>
+        </div>
+
+        <section class="grid-menu">
+            <button class="menu-item" id="btnDicionario">
+                <div class="icon-circle bg-pink"><i class="fa-solid fa-book"></i></div>
+                <span>Dicionário</span>
+            </button>
+
+            <button class="menu-item" id="btnApoio">
+                <div class="icon-circle bg-purple"><i class="fa-solid fa-map-location-dot"></i></div>
+                <span>Apoio Perto</span>
+            </button>
+
+            <button class="menu-item" id="btnEmergencia">
+                <div class="icon-circle bg-red"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                <span class="text-red">Emergência</span>
+            </button>
+
+            <button class="menu-item" id="btnGuia">
+                <div class="icon-circle bg-orange"><i class="fa-solid fa-shield-halved"></i></div>
+                <span>Guia Seguro</span>
+            </button>
+
+            <button class="menu-item" id="btnLigar180">
+                <div class="icon-circle bg-light-pink"><i class="fa-solid fa-phone"></i></div>
+                <span>Ligar 180</span>
+            </button>
+
+            <button class="menu-item" id="btnMais">
+                <div class="icon-circle bg-grey"><i class="fa-solid fa-bars-staggered"></i></div>
+                <span>Mais</span>
+            </button>
+        </section>
+
+        <section class="support-network">
+            <div class="support-header">
+                <div>
+                    <span class="subtitle">Rede de Apoio</span>
+                    <h3>Recomendado</h3>
+                </div>
+                <a href="#" class="see-all">Ver Todos</a>
+            </div>
+
+            <div class="cards-desktop-grid">
+                <div class="support-card card-deam">
+                    <div class="card-content">
+                        <h4>DEAM Centro</h4>
+                        <div class="card-info">
+                            <span><i class="fa-solid fa-location-dot"></i> A 2.5 km</span>
+                            <span class="status">24h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="support-card card-defensoria">
+                    <div class="card-content">
+                        <h4>Defensoria</h4>
+                        <div class="card-info">
+                            <span><i class="fa-solid fa-location-dot"></i> A 4.0 km</span>
+                            <span class="status">Aberto</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

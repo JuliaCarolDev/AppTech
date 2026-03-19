@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio Seguro - Configurar Contatos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-body">
+    <button id="quickExitBtn" class="quick-exit-btn" aria-label="Sair rapidamente do site">
+        Saída Rápida (Esc)
+    </button>
+
+    <main class="app-container bg-light-pink-container">
+
+        <header class="app-header header-panico">
+            <div class="header-title-row">
+                <a href="emergencia.html" class="btn-voltar-icon"><i class="fa-solid fa-arrow-left"></i></a>
+                <h2>Contatos de Confiança</h2>
+            </div>
+        </header>
+
+        <section class="contatos-content">
+            <p class="panico-descricao" style="text-align: left; margin-bottom: 30px;">
+                Adicione pessoas da sua extrema confiança. Elas receberão um alerta com sua localização caso você aperte o Botão de Pânico.
+            </p>
+
+            <form id="formContato" class="form-contato">
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="nomeContato" class="input-contato" placeholder="Nome da pessoa" required>
+                </div>
+
+                <div class="input-wrapper">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <input type="tel" id="telefoneContato" class="input-contato" placeholder="WhatsApp (com DDD)" required>
+                </div>
+
+                <button type="submit" class="btn-adicionar">
+                    <i class="fa-solid fa-plus"></i> Adicionar Contato
+                </button>
+            </form>
+
+            <hr class="divisor">
+
+            <h3 class="section-title" style="font-size: 1.2rem; margin-bottom: 15px;">Seus Contatos Salvos</h3>
+
+            <div class="lista-contatos" id="listaContatos">
+                <div class="contato-card">
+                    <div class="contato-info">
+                        <h4>Mãe</h4>
+                        <p>(11) 98765-4321</p>
+                    </div>
+                    <button class="btn-remover" title="Remover contato"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="contatos.js"></script>
+</body>
+
+</html>

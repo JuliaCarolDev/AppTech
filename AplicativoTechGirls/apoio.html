@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio Seguro - Advocacia e Apoio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-body">
+    <button id="quickExitBtn" class="quick-exit-btn" aria-label="Sair rapidamente do site">
+        Saída Rápida (Esc)
+    </button>
+
+    <main class="app-container no-padding-bottom">
+
+        <header class="app-header header-roxa">
+            <div class="header-title-row">
+                <a href="dashboard.html" class="btn-voltar-icon"><i class="fa-solid fa-arrow-left"></i></a>
+                <h2>Advocacia e Apoio</h2>
+            </div>
+        </header>
+
+        <section class="mapa-container">
+            <div class="badge-buscando" id="badgeBuscando">
+                <i class="fa-solid fa-location-crosshairs"></i>
+                <span id="textoBuscando">Buscando sua rede...</span>
+            </div>
+        </section>
+
+        <section class="bottom-sheet">
+            <h3 class="sheet-title">Mais próximos de você</h3>
+
+            <div class="lista-locais">
+                <div class="local-card">
+                    <div class="local-icon-box">
+                        <i class="fa-solid fa-building-shield"></i>
+                    </div>
+                    <div class="local-info">
+                        <h4>DEAM - Delegacia da Mulher</h4>
+                        <p>R. das Flores, 123 • 2.5 km</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                </div>
+
+                <div class="local-card">
+                    <div class="local-icon-box">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <div class="local-info">
+                        <h4>Defensoria Pública</h4>
+                        <p>Av. Principal, 450 • 4.0 km</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                </div>
+
+                <div class="local-card">
+                    <div class="local-icon-box">
+                        <i class="fa-solid fa-house-chimney-medical"></i>
+                    </div>
+                    <div class="local-info">
+                        <h4>Centro de Referência (CRAM)</h4>
+                        <p>Rua da Paz, 89 • 5.2 km</p>
+                    </div>
+                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="apoio.js"></script>
+</body>
+
+</html>

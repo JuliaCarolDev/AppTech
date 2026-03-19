@@ -1,0 +1,1322 @@
+/* ==========================================================
+   VARIÁVEIS GLOBAIS E PALETA DE CORES
+========================================================== */
+
+:root {
+    --bg-color: #f8f9fb;
+    --card-bg: #ffffff;
+    --primary-color: #f44c88;
+    --primary-dark: #d81b60;
+    --header-purple: #9a2b9e;
+    --text-main: #2d3748;
+    --text-muted: #4a5568;
+    --danger-color: #dc2626;
+    --danger-hover: #b91c1c;
+    /* Cores dos Ícones e Bordas */
+    --icon-pink: #ec4899;
+    --icon-purple: #9333ea;
+    --icon-red: #dc2626;
+    --icon-orange: #f97316;
+    --icon-light-pink: #f472b6;
+    --icon-grey: #9ca3af;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/* ==========================================================
+   BOTÃO DE SAÍDA RÁPIDA (GLOBAL)
+========================================================== */
+
+.quick-exit-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.quick-exit-btn:hover {
+    background-color: var(--danger-hover);
+}
+
+
+/* ==========================================================
+   TELA DE LOGIN (index.html)
+========================================================== */
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 80px;
+    padding: 20px;
+}
+
+.login-card {
+    background-color: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(244, 76, 136, 0.15);
+    text-align: center;
+}
+
+.login-card h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.guest-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+/* ==========================================================
+   ESTRUTURA BASE DO APLICATIVO (Telas Internas)
+========================================================== */
+
+.app-body {
+    background-color: #eaeef3;
+    padding: 20px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    min-height: calc(100vh - 40px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    position: relative;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+
+/* Modificadores de Fundo */
+
+.bg-light-pink-container {
+    background-color: #fdf2f8;
+}
+
+.bg-light-orange-container {
+    background-color: #fff7ed;
+}
+
+.bg-light-red-container {
+    background-color: #fef2f2;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0;
+}
+
+
+/* ==========================================================
+   CABEÇALHOS (HEADERS)
+========================================================== */
+
+.app-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 50px 40px 60px 40px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.btn-sobre-nos {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-sobre-nos:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+
+/* Headers Específicos */
+
+.header-simples {
+    padding: 30px 40px 50px 40px;
+}
+
+.header-roxa {
+    background-color: var(--header-purple);
+    padding: 30px 40px;
+}
+
+.header-laranja {
+    background-color: var(--icon-orange);
+    padding: 30px 40px;
+}
+
+.header-ligar {
+    background-color: var(--icon-light-pink);
+    padding: 30px 40px;
+}
+
+.header-panico {
+    background-color: #ce3030;
+    padding: 30px 40px;
+}
+
+.header-emergencia {
+    background-color: #b91c1c;
+    padding: 30px 40px;
+}
+
+.header-cinza {
+    background-color: var(--icon-grey);
+    padding: 30px 40px;
+    transition: background-color 0.5s ease;
+}
+
+.header-title-row {
+    display: flex;
+    align-items: center;
+}
+
+.btn-voltar-icon {
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: opacity 0.2s;
+}
+
+.btn-voltar-icon:hover {
+    opacity: 0.8;
+}
+
+.header-title-row h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   BARRAS DE PESQUISA
+========================================================== */
+
+.search-container {
+    margin-top: -25px;
+    padding: 0 40px;
+}
+
+.search-bar {
+    background-color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 30px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(216, 27, 96, 0.3);
+}
+
+.search-bar i {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: #ffd6e4;
+}
+
+.search-bar input {
+    background: none;
+    border: none;
+    color: white;
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.search-bar input::placeholder {
+    color: #ffd6e4;
+}
+
+.search-bar input:focus {
+    outline: none;
+}
+
+.search-container-dic {
+    margin-top: -25px;
+    padding: 0 40px;
+}
+
+.search-bar-white {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 15px 25px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(244, 76, 136, 0.15);
+}
+
+.text-pink {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+.search-bar-white input {
+    background: none;
+    border: none;
+    color: var(--text-main);
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.search-bar-white input::placeholder {
+    color: #9ca3af;
+}
+
+.search-bar-white input:focus {
+    outline: none;
+}
+
+
+/* ==========================================================
+   GRID DO DASHBOARD PRINCIPAL
+========================================================== */
+
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 50px 40px;
+}
+
+.menu-item {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Cores dos Ícones */
+
+.bg-pink {
+    background-color: var(--icon-pink);
+}
+
+.bg-purple {
+    background-color: var(--icon-purple);
+}
+
+.bg-red {
+    background-color: var(--icon-red);
+}
+
+.bg-orange {
+    background-color: var(--icon-orange);
+}
+
+.bg-light-pink {
+    background-color: var(--icon-light-pink);
+}
+
+.bg-grey {
+    background-color: var(--icon-grey);
+}
+
+.bg-green {
+    background-color: #16a34a;
+}
+
+.bg-dark {
+    background-color: #1f2937;
+}
+
+.menu-item span {
+    font-size: 1rem;
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.text-red {
+    color: var(--danger-color) !important;
+}
+
+
+/* ==========================================================
+   REDE DE APOIO (DASHBOARD)
+========================================================== */
+
+.support-network {
+    padding: 0 40px;
+}
+
+.support-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.support-header .subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.support-header h3 {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+}
+
+.see-all {
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.cards-desktop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.support-card {
+    height: 220px;
+    border-radius: 16px;
+    padding: 25px;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.support-card:hover {
+    transform: scale(1.02);
+}
+
+
+/* Cartões com as imagens dinâmicas e gradientes */
+
+.card-deam {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(190, 24, 93, 0.9)), url('https://images.unsplash.com/photo-1584852952875-1011885b1a37?q=80&w=600&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-defensoria {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(107, 33, 168, 0.9)), url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=600&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content {
+    width: 100%;
+}
+
+.card-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+/* ==========================================================
+   TELA DICIONÁRIO JURÍDICO
+========================================================== */
+
+.dicionario-lista {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dic-card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border-left: 6px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.dic-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.dic-title {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.dic-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.border-pink {
+    border-left-color: var(--icon-pink);
+}
+
+.border-purple {
+    border-left-color: var(--icon-purple);
+}
+
+.border-orange {
+    border-left-color: var(--icon-orange);
+}
+
+.border-red {
+    border-left-color: var(--icon-red);
+}
+
+.border-light-pink {
+    border-left-color: var(--icon-light-pink);
+}
+
+.border-grey {
+    border-left-color: var(--icon-grey);
+}
+
+
+/* ==========================================================
+   TELA APOIO PERTO (MAPA E LISTA)
+========================================================== */
+
+.mapa-container {
+    height: 300px;
+    background-color: #e5e5f7;
+    background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.mapa-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: -1;
+}
+
+.badge-buscando {
+    background-color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: var(--header-purple);
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.3s;
+}
+
+.bottom-sheet {
+    background-color: #ffffff;
+    border-radius: 35px 35px 0 0;
+    margin-top: -30px;
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    min-height: calc(100vh - 430px);
+}
+
+.sheet-title {
+    color: var(--text-main);
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.lista-locais {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.local-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #f3f4f6;
+    border-radius: 16px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.local-card:hover {
+    background-color: #fcfcfc;
+}
+
+.local-icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fce7f3;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.local-info {
+    margin-left: 20px;
+}
+
+.local-info h4 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.local-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.chevron-icon {
+    margin-left: auto;
+    color: #9ca3af;
+    font-size: 1.2rem;
+}
+
+
+/* ==========================================================
+   TELA DE EMERGÊNCIA / BOTÃO DE PÂNICO
+========================================================== */
+
+.panico-content {
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 60vh;
+    justify-content: center;
+}
+
+.sos-center-wrapper {
+    margin-bottom: 40px;
+}
+
+
+/* O Botão Limpo (Design Focado) */
+
+.btn-pedir-ajuda {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #e58b8b;
+    color: white;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 50px rgba(229, 139, 139, 0.5);
+    transition: all 0.3s ease;
+}
+
+.btn-pedir-ajuda i {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.btn-pedir-ajuda span {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.btn-pedir-ajuda:active {
+    transform: scale(0.95);
+}
+
+.btn-pedir-ajuda.enviando {
+    background-color: #f59e0b;
+    box-shadow: 0 0 50px rgba(245, 158, 11, 0.5);
+}
+
+.btn-pedir-ajuda.enviado {
+    background-color: #10b981;
+    box-shadow: 0 0 50px rgba(16, 185, 129, 0.5);
+}
+
+.panico-descricao {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    max-width: 320px;
+    margin-bottom: 40px;
+}
+
+.btn-configurar-contatos {
+    background: none;
+    border: none;
+    color: #ce3030;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-configurar-contatos:hover {
+    opacity: 0.8;
+}
+
+
+/* ==========================================================
+   TELA CONFIGURAR CONTATOS
+========================================================== */
+
+.contatos-content {
+    padding: 40px;
+}
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    color: #f472b6;
+    font-size: 1.1rem;
+}
+
+.input-contato {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 2px solid #fce7f3;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: var(--text-main);
+    transition: border-color 0.3s;
+}
+
+.input-contato:focus {
+    outline: none;
+    border-color: #ec4899;
+}
+
+.input-contato::placeholder {
+    color: #9ca3af;
+}
+
+.btn-adicionar {
+    background-color: #ce3030;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 5px;
+}
+
+.btn-adicionar:hover {
+    background-color: #b91c1c;
+}
+
+.lista-contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contato-card {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border-left: 5px solid #ce3030;
+    transition: transform 0.2s;
+}
+
+.contato-card:hover {
+    transform: translateX(5px);
+}
+
+.contato-info h4 {
+    margin-bottom: 3px;
+    color: var(--text-main);
+    font-size: 1.1rem;
+}
+
+.contato-info p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.btn-remover {
+    background: #fee2e2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: #dc2626;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.btn-remover:hover {
+    background: #fca5a5;
+    color: white;
+}
+
+
+/* ==========================================================
+   TELA GUIA SEGURO (Accordion)
+========================================================== */
+
+.guia-content {
+    padding: 30px 40px;
+}
+
+.guia-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.guia-card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.guia-card-header {
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.guia-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.guia-card-header h3 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    font-weight: 700;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.guia-card-header .seta {
+    color: var(--text-muted);
+    transition: transform 0.3s ease;
+}
+
+.guia-card-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #fafafa;
+    border-top: 1px solid #f3f4f6;
+}
+
+.guia-card-body p,
+.guia-card-body ul,
+.guia-card-body ol {
+    padding: 20px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.guia-card-body ul,
+.guia-card-body ol {
+    padding-top: 0;
+    padding-left: 40px;
+}
+
+.guia-card-body li {
+    margin-bottom: 10px;
+}
+
+.guia-card-body li strong {
+    color: var(--text-main);
+}
+
+.guia-card.active {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ==========================================================
+   TELA LIGAR 180
+========================================================== */
+
+.ligar-content {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.ligar-card {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(244, 114, 182, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ligar-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background-color: #fdf2f8;
+    color: var(--icon-light-pink);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ligar-card h3 {
+    color: var(--text-main);
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+.ligar-info-texto {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.ligar-info-texto p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.ligar-info-texto i {
+    color: #10b981;
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+.alerta-190 {
+    background-color: #fef2f2;
+    border-left: 4px solid #ef4444;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.alerta-190 i {
+    color: #ef4444;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.alerta-190 span {
+    color: #991b1b;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.btn-call-180 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--icon-light-pink);
+    color: white;
+    text-decoration: none;
+    padding: 18px 20px;
+    width: 100%;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(244, 114, 182, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-call-180 i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.btn-call-180:hover {
+    transform: translateY(-3px);
+    background-color: #db2777;
+}
+
+
+/* ==========================================================
+   TELA MAIS OPÇÕES E PERFIL
+========================================================== */
+
+.mais-content {
+    padding: 40px;
+}
+
+.perfil-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    margin-bottom: 30px;
+}
+
+.perfil-avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #f3f4f6;
+    color: var(--icon-grey);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-right: 20px;
+}
+
+.perfil-info {
+    flex-grow: 1;
+}
+
+.perfil-info h3 {
+    color: var(--text-main);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.perfil-info p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.btn-editar-perfil {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-editar-perfil:hover {
+    color: var(--primary-dark);
+}
+
+.opcoes-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.opcao-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    border: none;
+    width: 100%;
+    text-align: left;
+}
+
+.btn-opcao {
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-opcao:hover {
+    transform: translateY(-2px);
+    background-color: #fafafa;
+}
+
+.camuflagem-destaque {
+    border: 2px solid #e5e7eb;
+    background-color: #f9fafb;
+}
+
+.opcao-icone {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.opcao-texto {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.opcao-texto h4 {
+    color: var(--text-main);
+    font-size: 1.05rem;
+    margin-bottom: 3px;
+}
+
+.opcao-texto p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.3;
+}
+
+.opcao-item .seta {
+    color: #9ca3af;
+    font-size: 1.1rem;
+}
+
+
+/* Botão Toggle da Camuflagem */
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+    flex-shrink: 0;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: var(--primary-color);
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked+.slider:before {
+    transform: translateX(22px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* Divisor Horizontal (Genérico) */
+
+.divisor {
+    border: 0;
+    height: 1px;
+    background: #e5e7eb;
+    margin: 30px 0;
+}

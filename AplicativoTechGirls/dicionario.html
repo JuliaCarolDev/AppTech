@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio Seguro - Dicionário Jurídico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-body">
+    <button id="quickExitBtn" class="quick-exit-btn" aria-label="Sair rapidamente do site">
+        Saída Rápida (Esc)
+    </button>
+
+    <main class="app-container bg-light-pink-container">
+
+        <header class="app-header header-simples">
+            <div class="header-title-row">
+                <a href="dashboard.html" class="btn-voltar-icon"><i class="fa-solid fa-arrow-left"></i></a>
+                <h2>Dicionário Jurídico</h2>
+            </div>
+        </header>
+
+        <div class="search-container-dic">
+            <div class="search-bar-white">
+                <i class="fa-solid fa-magnifying-glass text-pink"></i>
+                <input type="text" id="searchInput" placeholder="Buscar termo...">
+            </div>
+        </div>
+
+        <section class="dicionario-lista" id="dicionarioLista">
+
+            <div class="dic-card border-pink">
+                <h3 class="dic-title">Medida Protetiva</h3>
+                <p class="dic-desc">Ordem judicial para proteger mulheres em situação de risco, obrigando o agressor a manter distância.</p>
+            </div>
+
+            <div class="dic-card border-purple">
+                <h3 class="dic-title">Violência Patrimonial</h3>
+                <p class="dic-desc">Quando o agressor controla, destrói ou retém o dinheiro, documentos ou bens da mulher.</p>
+            </div>
+
+            <div class="dic-card border-orange">
+                <h3 class="dic-title">Pensão Alimentícia</h3>
+                <p class="dic-desc">Valor pago para garantir o sustento dos filhos, cobrindo alimentação, moradia, saúde e educação.</p>
+            </div>
+
+            <div class="dic-card border-red">
+                <h3 class="dic-title">Violência Física</h3>
+                <p class="dic-desc">Qualquer conduta que ofenda a integridade ou saúde corporal da mulher (como empurrões, tapas ou socos).</p>
+            </div>
+
+            <div class="dic-card border-light-pink">
+                <h3 class="dic-title">Violência Psicológica</h3>
+                <p class="dic-desc">Qualquer ação que cause dano emocional, diminuição da autoestima, manipulação, ameaça ou controle constante.</p>
+            </div>
+
+            <div class="dic-card border-grey">
+                <h3 class="dic-title">Violência Moral</h3>
+                <p class="dic-desc">Qualquer conduta que configure calúnia (acusação falsa), difamação ou injúria (xingamentos) contra a mulher.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="dicionario.js"></script>
+</body>
+
+</html>
