@@ -1,0 +1,224 @@
+/* ==========================================================
+   TELA DICIONÁRIO JURÍDICO (dicionario.html)
+========================================================== */
+
+
+/* Fundo da aplicação com o gradiente super suave (Mesmo do Dashboard) */
+
+.bg-light-pink-container {
+    background: linear-gradient(180deg, #fffafb 0%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+
+/* Novo Cabeçalho (Estilo Dashboard) */
+
+.dic-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--header-purple));
+    color: white;
+    padding: 40px 30px 60px 30px;
+    border-radius: 0 0 30px 30px;
+}
+
+.header-title-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn-voltar-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.btn-voltar-icon:hover {
+    transform: translateX(-5px);
+}
+
+.dic-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.header-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-left: 35px;
+    /* Alinha com o texto, respeitando o espaço da seta */
+}
+
+
+/* Barra de Pesquisa */
+
+.search-container-dic {
+    padding: 0 30px;
+    margin-top: -25px;
+    /* Sobe para sobrepor o cabeçalho */
+    position: relative;
+    z-index: 10;
+}
+
+.search-bar-white {
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 25px rgba(216, 27, 96, 0.15);
+    border: 1px solid rgba(255, 192, 203, 0.4);
+}
+
+.search-bar-white i {
+    font-size: 1.2rem;
+    color: #d81b60;
+}
+
+.search-bar-white input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: #4a4a4a;
+    background: transparent;
+}
+
+.search-bar-white input::placeholder {
+    color: #b0b0b0;
+    font-style: italic;
+}
+
+
+/* --- SEÇÃO DE FILTROS --- */
+
+.filtros-container {
+    padding: 30px 30px 10px 30px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    /* Permite rolar horizontalmente no mobile se houver muitos botões */
+    scrollbar-width: none;
+    /* Esconde scrollbar Firefox */
+    -ms-overflow-style: none;
+    /* Esconde scrollbar IE/Edge */
+}
+
+.filtros-container::-webkit-scrollbar {
+    display: none;
+    /* Esconde scrollbar Chrome/Safari/Opera */
+}
+
+.btn-filtro {
+    background-color: rgba(216, 27, 96, 0.05);
+    /* Rosa super claro */
+    color: #5d4037;
+    border: 1px solid rgba(255, 192, 203, 0.5);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    /* Impede que o texto quebre em duas linhas */
+    transition: all 0.3s ease;
+}
+
+.btn-filtro:hover {
+    background-color: rgba(216, 27, 96, 0.1);
+}
+
+
+/* Estilo do botão quando está ativo/selecionado */
+
+.btn-filtro.active {
+    background: linear-gradient(135deg, #d81b60 0%, #ad1457 100%);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 10px rgba(216, 27, 96, 0.3);
+}
+
+
+/* --- LISTA DE CARTÕES DO DICIONÁRIO --- */
+
+.dicionario-lista {
+    padding: 10px 30px 40px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dic-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(147, 51, 234, 0.08);
+    border: 1px solid rgba(255, 192, 203, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+    /* Para a bordinha colorida não sair do card */
+}
+
+.dic-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(216, 27, 96, 0.15);
+}
+
+
+/* A bordinha lateral agora é uma faixa suave no topo ou na lateral */
+
+.dic-card-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+}
+
+.dic-title {
+    color: #d81b60;
+    /* Rosa escuro para o termo */
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    padding-left: 10px;
+    /* Afasta o texto da barra colorida lateral */
+}
+
+.dic-desc {
+    color: #5d4037;
+    /* Marrom escuro suave */
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding-left: 10px;
+}
+
+
+/* Reutilizando as cores de gradiente do dashboard para as barras laterais */
+
+.bg-pink {
+    background: linear-gradient(180deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.bg-purple {
+    background: linear-gradient(180deg, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.bg-orange {
+    background: linear-gradient(180deg, #f6d365 0%, #fda085 100%);
+}
+
+.bg-red {
+    background: linear-gradient(180deg, #ff0844 0%, #ffb199 100%);
+}
+
+.bg-light-pink {
+    background: linear-gradient(180deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.bg-grey {
+    background: linear-gradient(180deg, #e0c3fc 0%, #8ec5fc 100%);
+}

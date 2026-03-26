@@ -1,0 +1,435 @@
+/* ==========================================================
+   TELA PRINCIPAL / LANDING PAGE (dashboard.html)
+========================================================== */
+
+
+/* Fundo da aplicação com um gradiente super suave */
+
+.bg-light-pink-container {
+    background: linear-gradient(180deg, #fffafb 0%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+
+/* --- NOVO CABEÇALHO DE BOAS-VINDAS --- */
+
+.welcome-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--header-purple));
+    color: white;
+    padding: 40px 30px 60px 30px;
+    border-radius: 0 0 30px 30px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.header-top h2 {
+    font-size: 1.6rem;
+    max-width: 70%;
+    line-height: 1.3;
+}
+
+.btn-sobre-nos-sm {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-sobre-nos-sm:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+
+/* --- CARROSSEL EDUCATIVO --- */
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    gap: 15px;
+    padding-bottom: 15px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel-slides::-webkit-scrollbar {
+    display: none;
+}
+
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.slide-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: white;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.slide-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.slide-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+
+/* Indicadores (Dots) do Carrossel */
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: -10px;
+    position: relative;
+    z-index: 2;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background-color: white;
+    width: 20px;
+    border-radius: 4px;
+}
+
+
+/* --- BARRA DE PESQUISA (Estilo "Landing Page") --- */
+
+.search-container-landing {
+    padding: 0 30px;
+    margin-top: -25px;
+    /* Sobe para ficar sobrepondo o header */
+    position: relative;
+    z-index: 10;
+}
+
+.search-bar-white {
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 8px 25px rgba(216, 27, 96, 0.15);
+    border: 1px solid rgba(255, 192, 203, 0.4);
+}
+
+.search-bar-white i {
+    font-size: 1.2rem;
+    color: #d81b60;
+}
+
+.search-bar-white input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: #4a4a4a;
+    background: transparent;
+}
+
+.search-bar-white input::placeholder {
+    color: #b0b0b0;
+    font-style: italic;
+}
+
+
+/* Estilos do Menu Suspenso da Pesquisa (COM ÍCONES) */
+
+.search-results-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 30px;
+    right: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(216, 27, 96, 0.15);
+    list-style: none;
+    padding: 10px 0;
+    margin-top: 10px;
+    z-index: 20;
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 192, 203, 0.4);
+}
+
+.search-results-dropdown li {
+    padding: 12px 25px;
+    color: #4a4a4a;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: flex;
+    /* Coloca ícone e texto lado a lado */
+    align-items: center;
+    /* Centraliza verticalmente */
+    gap: 12px;
+    /* Espaço entre o ícone e o texto */
+}
+
+.search-results-dropdown li:hover {
+    background: #fff0f5;
+    color: #d81b60;
+}
+
+.search-results-dropdown li i {
+    color: #d81b60;
+    /* Rosa para combinar com o tema */
+    font-size: 1.1rem;
+    width: 20px;
+    /* Alinha os textos independentemente do ícone */
+    text-align: center;
+}
+
+
+/* --- GRID DE MENU --- */
+
+.grid-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 15px;
+    padding: 50px 30px;
+}
+
+.menu-item {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.menu-item:hover {
+    transform: translateY(-3px);
+}
+
+.menu-item span {
+    font-size: 0.95rem;
+    color: #5d4037;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.text-red {
+    color: var(--danger-color) !important;
+}
+
+
+/* Ícones do Menu com Gradientes Suaves e Animações */
+
+.icon-circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover .icon-circle {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(216, 27, 96, 0.25);
+}
+
+.bg-pink {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #d81b60;
+}
+
+.bg-purple {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.bg-red {
+    background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+    box-shadow: 0 8px 20px rgba(255, 8, 68, 0.4);
+}
+
+.bg-orange {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.bg-light-pink {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #d81b60;
+}
+
+.bg-grey {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+
+/* --- REDE DE APOIO ITAPETININGA --- */
+
+.support-network {
+    padding: 0 30px 30px 30px;
+}
+
+.support-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+}
+
+.support-header .subtitle {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.support-header h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.cards-desktop-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.support-card {
+    height: 180px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(147, 51, 234, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+.support-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(147, 51, 234, 0.25);
+}
+
+.support-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 10%, rgba(0, 0, 0, 0.2) 100%);
+    z-index: 1;
+}
+
+.card-content {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.card-ddm-itape {
+    /* Imagem de fachada institucional estável e de alta qualidade */
+    background-image: url('https://jornal.usp.br/wp-content/uploads/2024/07/20240711_delegaia-da-mulher.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-creas-itape {
+    background-image: url('https://s2-g1.glbimg.com/_AbYAcsTqZ65k69a_212l2IIyR8=/0x0:1269x634/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2026/3/5/g1dqrATo6pGfqIssoAlg/captura-de-tela-2026-03-06-182535-1-.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.card-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.card-info i {
+    margin-right: 8px;
+    color: var(--icon-light-pink);
+}
+
+
+/* Ajustes para telas maiores (Desktop) */
+
+@media (min-width: 768px) {
+    .grid-menu {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .carousel-slides {
+        gap: 30px;
+    }
+    .slide {
+        flex: 0 0 48%;
+    }
+}

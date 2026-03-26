@@ -1,0 +1,250 @@
+/* ==========================================================
+   TELA GUIA SEGURO - ACORDEÃO (guia.html)
+========================================================== */
+
+
+/* Fundo da aplicação */
+
+.bg-light-orange-container {
+    background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+
+/* Cabeçalho Laranja Quente */
+
+.header-laranja {
+    background: linear-gradient(135deg, #f59e0b, #ea580c);
+    /* Laranja vibrante para pêssego escuro */
+    color: white;
+    padding: 40px 30px 60px 30px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 10px 20px rgba(234, 88, 12, 0.15);
+}
+
+.header-title-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.btn-voltar-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.btn-voltar-icon:hover {
+    transform: translateX(-5px);
+}
+
+.header-laranja h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.header-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-left: 35px;
+}
+
+
+/* Área de Conteúdo */
+
+.guia-content {
+    padding: 10px 30px 40px 30px;
+    margin-top: -25px;
+    /* Sobe sobrepondo o cabeçalho */
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Info Box do Topo */
+
+.info-box-guia {
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 1px solid #fde68a;
+    /* Borda amarelo/laranja clarinha */
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.08);
+}
+
+.info-icon-guia {
+    color: #ea580c;
+    font-size: 1.5rem;
+    margin-top: 2px;
+}
+
+.panico-descricao {
+    color: #5d4037;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+/* Lista de Guias */
+
+.guia-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* O Cartão Fechado */
+
+.guia-card {
+    background-color: white;
+    border-radius: 20px;
+    /* Bordas mais redondas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+
+/* O Cabeçalho (Onde a usuária clica) */
+
+.guia-card-header {
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+
+.guia-card-header:hover {
+    background-color: #fffbeb;
+    /* Fundo suave ao passar o mouse */
+}
+
+
+/* Ícones padronizados em gradiente */
+
+.guia-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 35%;
+    /* Squircle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.bg-orange {
+    background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
+}
+
+.bg-red {
+    background: linear-gradient(135deg, #fca5a5 0%, #ef4444 100%);
+}
+
+.bg-purple {
+    background: linear-gradient(135deg, #c4b5fd 0%, #8b5cf6 100%);
+}
+
+.bg-green {
+    background: linear-gradient(135deg, #6ee7b7 0%, #10b981 100%);
+}
+
+.bg-pink {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #d81b60;
+}
+
+.bg-light-pink {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #d81b60;
+}
+
+.bg-grey {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.guia-card-header h3 {
+    color: #5d4037;
+    /* Marrom quente */
+    font-size: 1.1rem;
+    font-weight: 700;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+
+/* Seta animada */
+
+.guia-card-header .seta {
+    color: #f59e0b;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+
+/* O Corpo do Texto (Escondido por padrão) */
+
+.guia-card-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #fafafa;
+    border-top: 1px solid #fef3c7;
+}
+
+
+/* Wrapper interno para não bugar a animação de max-height com padding */
+
+.guia-card-body-content {
+    padding: 20px;
+}
+
+.guia-card-body p,
+.guia-card-body ul,
+.guia-card-body ol {
+    color: #7a5e65;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.guia-card-body ul,
+.guia-card-body ol {
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.guia-card-body li {
+    margin-bottom: 10px;
+}
+
+.guia-card-body li strong {
+    color: #d81b60;
+    /* Rosa escuro para dar destaque aos tópicos */
+}
+
+
+/* Modificador de Estado: Quando o cartão está "Ativo" (Aberto) */
+
+.guia-card.active {
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.15);
+    border-color: rgba(245, 158, 11, 0.4);
+}

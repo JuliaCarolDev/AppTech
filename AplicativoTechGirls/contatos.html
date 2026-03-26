@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apoio Seguro - Configurar Contatos</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="CSS_paste/global.css">
+    <link rel="stylesheet" href="CSS_paste/contatos.css">
 </head>
 
 <body class="app-body">
@@ -21,17 +24,24 @@
                 <a href="emergencia.html" class="btn-voltar-icon"><i class="fa-solid fa-arrow-left"></i></a>
                 <h2>Contatos de Confiança</h2>
             </div>
+            <p class="header-subtitle">Gerencie quem receberá seus alertas de emergência.</p>
         </header>
 
         <section class="contatos-content">
-            <p class="panico-descricao" style="text-align: left; margin-bottom: 30px;">
-                Adicione pessoas da sua extrema confiança. Elas receberão um alerta com sua localização caso você aperte o Botão de Pânico.
-            </p>
+
+            <div class="info-box-contatos">
+                <i class="fa-solid fa-shield-heart info-icon-contatos"></i>
+                <p class="panico-descricao">
+                    Adicione pessoas da sua extrema confiança. Elas receberão uma mensagem com sua localização exata caso você aperte o Botão de Pânico.
+                </p>
+            </div>
 
             <form id="formContato" class="form-contato">
+                <h3 class="form-title">Adicionar Novo Contato</h3>
+
                 <div class="input-wrapper">
                     <i class="fa-solid fa-user"></i>
-                    <input type="text" id="nomeContato" class="input-contato" placeholder="Nome da pessoa" required>
+                    <input type="text" id="nomeContato" class="input-contato" placeholder="Nome da pessoa (Ex: Ana)" required>
                 </div>
 
                 <div class="input-wrapper">
@@ -40,19 +50,47 @@
                 </div>
 
                 <button type="submit" class="btn-adicionar">
-                    <i class="fa-solid fa-plus"></i> Adicionar Contato
+                    <i class="fa-solid fa-plus"></i> Salvar Contato
                 </button>
             </form>
 
             <hr class="divisor">
 
-            <h3 class="section-title" style="font-size: 1.2rem; margin-bottom: 15px;">Seus Contatos Salvos</h3>
+            <div class="header-lista-contatos">
+                <h3 class="section-title">Seus Contatos Salvos</h3>
+                <span class="badge-contador">3/5</span>
+            </div>
 
             <div class="lista-contatos" id="listaContatos">
                 <div class="contato-card">
+                    <div class="contato-avatar bg-pink">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
                     <div class="contato-info">
                         <h4>Mãe</h4>
                         <p>(11) 98765-4321</p>
+                    </div>
+                    <button class="btn-remover" title="Remover contato"><i class="fa-solid fa-trash"></i></button>
+                </div>
+
+                <div class="contato-card">
+                    <div class="contato-avatar bg-purple">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="contato-info">
+                        <h4>Irmã</h4>
+                        <p>(15) 99123-4567</p>
+                    </div>
+                    <button class="btn-remover" title="Remover contato"><i class="fa-solid fa-trash"></i></button>
+                </div>
+
+                <div class="contato-card">
+                    <div class="contato-avatar bg-orange">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="contato-info">
+                        <h4>Amiga (Carla)</h4>
+                        <p>(15) 98888-7777</p>
                     </div>
                     <button class="btn-remover" title="Remover contato"><i class="fa-solid fa-trash"></i></button>
                 </div>

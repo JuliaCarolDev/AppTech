@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apoio Seguro - Botão de Pânico</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="CSS_paste/global.css">
+    <link rel="stylesheet" href="CSS_paste/emergencia.css">
 </head>
 
 <body class="app-body">
@@ -21,23 +24,38 @@
                 <a href="dashboard.html" class="btn-voltar-icon"><i class="fa-solid fa-arrow-left"></i></a>
                 <h2>Botão de Pânico</h2>
             </div>
+            <p class="header-subtitle">Uso exclusivo para situações de risco iminente.</p>
         </header>
 
         <section class="panico-content">
             <div class="sos-center-wrapper">
+                <div class="pulse-ring ring-1"></div>
+                <div class="pulse-ring ring-2"></div>
+
                 <button id="btnPedirAjuda" class="btn-pedir-ajuda">
                     <i class="fa-solid fa-triangle-exclamation"></i>
                     <span>PEDIR AJUDA</span>
                 </button>
             </div>
 
-            <p class="panico-descricao">
-                Ao apertar este botão, uma mensagem com sua localização será enviada aos seus contatos de confiança.
-            </p>
+            <div class="info-box">
+                <i class="fa-solid fa-circle-info info-icon"></i>
+                <p class="panico-descricao">
+                    Ao apertar este botão, uma mensagem silenciosa com sua localização exata será enviada aos seus contatos de confiança.
+                </p>
+            </div>
 
-            <button id="btnConfigurarContatos" class="btn-configurar-contatos">
-                Configurar contatos
-            </button>
+            <div class="contatos-card" id="btnConfigurarContatos">
+                <div class="contatos-icon">
+                    <i class="fa-solid fa-user-shield"></i>
+                </div>
+                <div class="contatos-text">
+                    <h4>Contatos de Confiança</h4>
+                    <p>Adicione ou gerencie quem receberá o alerta.</p>
+                </div>
+                <i class="fa-solid fa-chevron-right chevron-icon"></i>
+            </div>
+
         </section>
     </main>
 

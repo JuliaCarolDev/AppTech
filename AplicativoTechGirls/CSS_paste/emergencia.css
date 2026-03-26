@@ -1,0 +1,251 @@
+/* ==========================================================
+   TELA DE EMERGÊNCIA / BOTÃO DE PÂNICO (emergencia.html)
+========================================================== */
+
+
+/* Fundo da aplicação */
+
+.bg-light-pink-container {
+    background: linear-gradient(180deg, #fffafb 0%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+
+/* Cabeçalho Vermelho Escuro/Vinho */
+
+.header-panico {
+    background: linear-gradient(135deg, #c62828, #e53935);
+    color: white;
+    padding: 40px 30px 60px 30px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 10px 20px rgba(198, 40, 40, 0.2);
+}
+
+.header-title-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.btn-voltar-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.btn-voltar-icon:hover {
+    transform: translateX(-5px);
+}
+
+.header-panico h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.header-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-left: 35px;
+}
+
+
+/* Área de Conteúdo Central */
+
+.panico-content {
+    padding: 10px 30px 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: -30px;
+    /* Sobe um pouco para integrar com o cabeçalho */
+}
+
+
+/* Wrapper para o botão e as animações */
+
+.sos-center-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Animação Pulsante Atrás do Botão */
+
+.pulse-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: rgba(229, 57, 53, 0.4);
+    z-index: 1;
+    animation: pulse 2.5s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.ring-2 {
+    animation-delay: 1s;
+    background-color: rgba(229, 57, 53, 0.2);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+
+/* O Botão de Pânico Principal */
+
+.btn-pedir-ajuda {
+    position: relative;
+    z-index: 5;
+    /* Fica acima dos anéis pulsantes */
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+    color: white;
+    border: 6px solid #ffcdd2;
+    /* Borda clara de contraste */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 15px 35px rgba(198, 40, 40, 0.4), inset 0 0 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-pedir-ajuda i {
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+}
+
+.btn-pedir-ajuda span {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.btn-pedir-ajuda:active {
+    transform: scale(0.95);
+    box-shadow: 0 5px 15px rgba(198, 40, 40, 0.5);
+}
+
+
+/* Modificadores de estado do botão (Enviando / Enviado) */
+
+.btn-pedir-ajuda.enviando {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    border-color: #fef3c7;
+    box-shadow: 0 15px 35px rgba(217, 119, 6, 0.4);
+}
+
+.btn-pedir-ajuda.enviado {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-color: #d1fae5;
+    box-shadow: 0 15px 35px rgba(5, 150, 105, 0.4);
+}
+
+
+/* Box Explicativo com Design Moderno */
+
+.info-box {
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    border: 1px solid #f8bbd0;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 90%;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(216, 27, 96, 0.05);
+    transition: border-color 0.3s;
+}
+
+.info-icon {
+    color: #d81b60;
+    font-size: 1.5rem;
+    margin-top: 3px;
+    transition: color 0.3s;
+}
+
+.panico-descricao {
+    color: #5d4037;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.4;
+    text-align: left;
+    margin: 0;
+}
+
+
+/* Card Inferior (Configurar Contatos) */
+
+.contatos-card {
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(147, 51, 234, 0.08);
+    border: 1px solid rgba(255, 192, 203, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contatos-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(216, 27, 96, 0.15);
+}
+
+.contatos-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #d81b60;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.contatos-text {
+    margin-left: 15px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.contatos-text h4 {
+    color: #d81b60;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.contatos-text p {
+    color: #7a5e65;
+    font-size: 0.85rem;
+}
+
+.chevron-icon {
+    color: #f8bbd0;
+    font-size: 1.2rem;
+}

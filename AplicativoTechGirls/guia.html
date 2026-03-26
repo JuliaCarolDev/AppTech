@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apoio Seguro - Guia Seguro</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="CSS_paste/global.css">
+    <link rel="stylesheet" href="CSS_paste/guia.css">
 </head>
 
 <body class="app-body">
@@ -21,12 +24,17 @@
                 <a href="dashboard.html" class="btn-voltar-icon"><i class="fa-solid fa-arrow-left"></i></a>
                 <h2>Guia Seguro</h2>
             </div>
+            <p class="header-subtitle">Informação é a sua maior ferramenta de proteção.</p>
         </header>
 
         <section class="guia-content">
-            <p class="panico-descricao" style="text-align: left; margin-bottom: 25px;">
-                Informação é proteção. Leia nossos guias para entender sinais de alerta, como se proteger digitalmente e como planejar sua segurança.
-            </p>
+
+            <div class="info-box-guia">
+                <i class="fa-solid fa-book-open-reader info-icon-guia"></i>
+                <p class="panico-descricao">
+                    Leia nossos guias para entender os sinais de alerta, saber como se proteger digitalmente e descobrir onde encontrar ajuda na sua cidade.
+                </p>
+            </div>
 
             <div class="guia-lista">
 
@@ -37,13 +45,15 @@
                         <i class="fa-solid fa-chevron-down seta"></i>
                     </button>
                     <div class="guia-card-body">
-                        <p>O abuso raramente começa com agressão física. Fique atenta a estes sinais iniciais:</p>
-                        <ul>
-                            <li><strong>Controle:</strong> Quer saber suas senhas, onde você está e com quem fala o tempo todo.</li>
-                            <li><strong>Isolamento:</strong> Afasta você de amigos e familiares, dizendo que "eles não prestam" ou "têm inveja".</li>
-                            <li><strong>Culpa:</strong> Faz você acreditar que tudo de ruim que acontece na relação é culpa sua.</li>
-                            <li><strong>Ciúme excessivo:</strong> Confunde ciúme doentio com "excesso de amor".</li>
-                        </ul>
+                        <div class="guia-card-body-content">
+                            <p>O abuso raramente começa com agressão física. Fique atenta a estes sinais iniciais:</p>
+                            <ul>
+                                <li><strong>Controle:</strong> Quer saber suas senhas, onde você está e com quem fala o tempo todo.</li>
+                                <li><strong>Isolamento:</strong> Afasta você de amigos e familiares, dizendo que "eles não prestam" ou "têm inveja".</li>
+                                <li><strong>Culpa:</strong> Faz você acreditar que tudo de ruim que acontece na relação é culpa sua.</li>
+                                <li><strong>Ciúme excessivo:</strong> Confunde ciúme doentio com "excesso de amor".</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -54,12 +64,14 @@
                         <i class="fa-solid fa-chevron-down seta"></i>
                     </button>
                     <div class="guia-card-body">
-                        <p>A violência doméstica costuma seguir um padrão de três fases que se repetem e pioram com o tempo:</p>
-                        <ol>
-                            <li><strong>Aumento de Tensão:</strong> O agressor fica irritado com facilidade, ocorrem xingamentos e ameaças. A mulher tenta "pisar em ovos" para evitar brigas.</li>
-                            <li><strong>Ato de Violência:</strong> A tensão explode em agressão (física, psicológica, sexual ou patrimonial).</li>
-                            <li><strong>Lua de Mel:</strong> O agressor pede desculpas, chora, promete que nunca mais vai acontecer e se mostra carinhoso, dando falsas esperanças de mudança.</li>
-                        </ol>
+                        <div class="guia-card-body-content">
+                            <p>A violência doméstica costuma seguir um padrão de três fases que se repetem e pioram com o tempo:</p>
+                            <ol>
+                                <li><strong>Aumento de Tensão:</strong> O agressor fica irritado com facilidade, ocorrem xingamentos e ameaças. A mulher tenta "pisar em ovos".</li>
+                                <li><strong>Ato de Violência:</strong> A tensão explode em agressão (física, psicológica, sexual ou patrimonial).</li>
+                                <li><strong>Lua de Mel:</strong> O agressor pede desculpas, chora, promete que nunca mais vai acontecer e se mostra carinhoso, dando falsas esperanças.</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
 
@@ -70,13 +82,15 @@
                         <i class="fa-solid fa-chevron-down seta"></i>
                     </button>
                     <div class="guia-card-body">
-                        <p>Se o seu aparelho for monitorado, siga estas dicas:</p>
-                        <ul>
-                            <li>Use as abas anônimas do navegador para buscar ajuda.</li>
-                            <li>Limpe o histórico de chamadas e de navegação regularmente.</li>
-                            <li>Não salve contatos de redes de apoio com nomes óbvios (ex: salve a delegacia com o nome de um restaurante ou clínica).</li>
-                            <li>Sempre use o botão "Saída Rápida" deste aplicativo se ele se aproximar.</li>
-                        </ul>
+                        <div class="guia-card-body-content">
+                            <p>Se você suspeita que seu celular ou computador é monitorado:</p>
+                            <ul>
+                                <li>Use as abas anônimas do navegador para buscar ajuda.</li>
+                                <li>Limpe o histórico de chamadas e de navegação regularmente.</li>
+                                <li>Não salve contatos de redes de apoio com nomes óbvios (ex: salve a delegacia como "Clínica" ou "Restaurante").</li>
+                                <li>Sempre use o botão "Saída Rápida (Esc)" deste aplicativo se ele se aproximar.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
@@ -87,12 +101,69 @@
                         <i class="fa-solid fa-chevron-down seta"></i>
                     </button>
                     <div class="guia-card-body">
-                        <p>Caso precise sair de casa às pressas, esteja preparada:</p>
-                        <ul>
-                            <li>Esconda uma bolsa pequena com cópias de documentos seus e de seus filhos, chaves extras e algum dinheiro.</li>
-                            <li>Combine uma palavra de código com seus vizinhos ou amigos de confiança para que eles chamem a polícia (190) quando você disser a palavra.</li>
-                            <li>Identifique a rota de saída mais fácil e evite cômodos com objetos cortantes (como a cozinha) durante uma discussão.</li>
-                        </ul>
+                        <div class="guia-card-body-content">
+                            <p>Caso precise sair de casa às pressas, esteja preparada:</p>
+                            <ul>
+                                <li>Esconda uma bolsa pequena com cópias de documentos seus e de seus filhos, chaves extras e algum dinheiro.</li>
+                                <li>Combine uma palavra de código com seus vizinhos ou amigos de confiança para que chamem a polícia (190).</li>
+                                <li>Identifique a rota de saída mais fácil e evite cômodos com objetos perigosos (como a cozinha) durante uma discussão.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guia-card">
+                    <button class="guia-card-header">
+                        <div class="guia-icon bg-pink"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                        <h3>Onde procurar ajuda presencial?</h3>
+                        <i class="fa-solid fa-chevron-down seta"></i>
+                    </button>
+                    <div class="guia-card-body">
+                        <div class="guia-card-body-content">
+                            <p>Em <strong>Itapetininga/SP</strong>, você pode recorrer aos seguintes locais para acolhimento, denúncia ou apoio social:</p>
+                            <ul>
+                                <li><strong>DDM (Delegacia da Mulher):</strong> Local para registrar Boletim de Ocorrência e solicitar Medida Protetiva. (R. Dr. Júlio Prestes, 752).</li>
+                                <li><strong>CREAS:</strong> Oferece apoio psicológico e assistência social continuada para vítimas. (Av. Padre Antônio Brunetti, 1021).</li>
+                                <li><strong>Defensoria Pública:</strong> Advogados gratuitos para divórcio, pensão e guarda. (R. Monsenhor Soares, 126).</li>
+                                <li><strong>Hospital/Santa Casa:</strong> Em caso de agressão física ou sexual, busque o pronto-socorro para atendimento e exame de corpo de delito.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guia-card">
+                    <button class="guia-card-header">
+                        <div class="guia-icon bg-light-pink"><i class="fa-solid fa-school"></i></div>
+                        <h3>Apoio no IFSP e Grupos Estudantis</h3>
+                        <i class="fa-solid fa-chevron-down seta"></i>
+                    </button>
+                    <div class="guia-card-body">
+                        <div class="guia-card-body-content">
+                            <p>Se você é aluna do <strong>Instituto Federal (IFSP - Campus Itapetininga)</strong>, você tem uma rede de apoio interna. Não passe por isso sozinha:</p>
+                            <ul>
+                                <li><strong>Coordenadoria Sociopedagógica (CSP):</strong> Conta com psicólogas e assistentes sociais. O atendimento é sigiloso e focado no seu bem-estar e permanência na escola.</li>
+                                <li><strong>Coletivo Feminista / NEGES:</strong> O campus possui grupos e coletivos organizados por alunas e servidoras para promover debates e oferecer acolhimento de mulher para mulher. Procure as representantes estudantis.</li>
+                                <li><strong>O que a escola pode fazer?</strong> Professores e servidores estão orientados a acolher e encaminhar casos de violência para os órgãos de proteção.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guia-card">
+                    <button class="guia-card-header">
+                        <div class="guia-icon bg-grey"><i class="fa-solid fa-phone-volume"></i></div>
+                        <h3>Contatos Rápidos e Úteis</h3>
+                        <i class="fa-solid fa-chevron-down seta"></i>
+                    </button>
+                    <div class="guia-card-body">
+                        <div class="guia-card-body-content">
+                            <p>Salve estes números (lembre-se de disfarçar os nomes na sua agenda se estiver em risco):</p>
+                            <ul>
+                                <li><strong>190 (Polícia Militar):</strong> Ligue no momento exato em que a agressão estiver acontecendo ou prestes a acontecer.</li>
+                                <li><strong>180 (Central de Atendimento):</strong> Para pedir informações, orientações ou fazer denúncias anônimas.</li>
+                                <li><strong>192 (SAMU):</strong> Para emergências médicas decorrentes de violência física.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 

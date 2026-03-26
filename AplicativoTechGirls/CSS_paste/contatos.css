@@ -1,0 +1,289 @@
+/* ==========================================================
+   TELA DE CONTATOS DE CONFIANÇA (contatos.html)
+========================================================== */
+
+
+/* Fundo da aplicação */
+
+.bg-light-pink-container {
+    background: linear-gradient(180deg, #fffafb 0%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+
+/* Cabeçalho Vermelho (Padrão Emergência) */
+
+.header-panico {
+    background: linear-gradient(135deg, #c62828, #e53935);
+    color: white;
+    padding: 40px 30px 60px 30px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 10px 20px rgba(198, 40, 40, 0.2);
+}
+
+.header-title-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.btn-voltar-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.btn-voltar-icon:hover {
+    transform: translateX(-5px);
+}
+
+.header-panico h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.header-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-left: 35px;
+}
+
+
+/* Área de Conteúdo */
+
+.contatos-content {
+    padding: 10px 30px 40px 30px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 10;
+}
+
+
+/* Box de Informação */
+
+.info-box-contatos {
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 1px solid #f8bbd0;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(216, 27, 96, 0.08);
+}
+
+.info-icon-contatos {
+    color: #e53935;
+    font-size: 1.5rem;
+    margin-top: 2px;
+}
+
+.panico-descricao {
+    color: #5d4037;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+/* Formulário de Adição */
+
+.form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: white;
+    padding: 25px 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(147, 51, 234, 0.05);
+    border: 1px solid rgba(255, 192, 203, 0.3);
+}
+
+.form-title {
+    font-size: 1.1rem;
+    color: #d81b60;
+    margin-bottom: 5px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper i {
+    position: absolute;
+    left: 15px;
+    color: #f48fb1;
+    font-size: 1.1rem;
+}
+
+.input-contato {
+    width: 100%;
+    padding: 14px 14px 14px 45px;
+    border: 2px solid #f8bbd0;
+    border-radius: 15px;
+    font-size: 1rem;
+    background-color: #fffafb;
+    color: #4a4a4a;
+    transition: all 0.3s ease;
+}
+
+.input-contato:focus {
+    outline: none;
+    border-color: #d81b60;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(216, 27, 96, 0.1);
+}
+
+.input-contato::placeholder {
+    color: #bcaaa4;
+}
+
+.btn-adicionar {
+    background: linear-gradient(135deg, #e53935 0%, #c62828 100%);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+    box-shadow: 0 8px 20px rgba(198, 40, 40, 0.3);
+}
+
+.btn-adicionar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(198, 40, 40, 0.4);
+}
+
+
+/* Divisor */
+
+.divisor {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(216, 27, 96, 0.2), transparent);
+    margin: 30px 0;
+}
+
+
+/* Header da Lista de Contatos */
+
+.header-lista-contatos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: #5d4037;
+}
+
+.badge-contador {
+    background-color: #fce4ec;
+    color: #d81b60;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 0.85rem;
+}
+
+
+/* Lista de Contatos Guardados */
+
+.lista-contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contato-card {
+    background: white;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 192, 203, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contato-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(216, 27, 96, 0.1);
+}
+
+.contato-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.bg-pink {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+}
+
+.bg-purple {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.bg-orange {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.contato-info {
+    margin-left: 15px;
+    flex-grow: 1;
+}
+
+.contato-info h4 {
+    margin-bottom: 2px;
+    color: #d81b60;
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.contato-info p {
+    font-size: 0.85rem;
+    color: #7a5e65;
+    font-weight: 500;
+}
+
+
+/* Botão de Lixeira */
+
+.btn-remover {
+    background: #fff0f5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: #e53935;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.btn-remover:hover {
+    background: #ffebee;
+    transform: scale(1.1);
+}

@@ -4,68 +4,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apoio Seguro - Advocacia e Apoio</title>
+    <title>Apoio Seguro - Advocacia e Apoio (Itapetininga)</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="CSS_paste/global.css">
+    <link rel="stylesheet" href="CSS_paste/apoio.css">
 </head>
 
-<body class="app-body">
+<body class="app-body bg-light-pink-container">
     <button id="quickExitBtn" class="quick-exit-btn" aria-label="Sair rapidamente do site">
         Saída Rápida (Esc)
     </button>
 
     <main class="app-container no-padding-bottom">
 
-        <header class="app-header header-roxa">
+        <header class="app-header header-padrao">
             <div class="header-title-row">
-                <a href="dashboard.html" class="btn-voltar-icon"><i class="fa-solid fa-arrow-left"></i></a>
-                <h2>Advocacia e Apoio</h2>
+                <a href="dashboard.html" class="btn-voltar-icon" aria-label="Voltar para Início">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <h2>Apoio Perto de Você</h2>
             </div>
+            <p class="header-subtitle">Rede de proteção em Itapetininga/SP</p>
         </header>
 
         <section class="mapa-container">
             <div class="badge-buscando" id="badgeBuscando">
-                <i class="fa-solid fa-location-crosshairs"></i>
+                <i class="fa-solid fa-location-crosshairs icon-spin"></i>
                 <span id="textoBuscando">Buscando sua rede...</span>
             </div>
         </section>
 
         <section class="bottom-sheet">
-            <h3 class="sheet-title">Mais próximos de você</h3>
+            <h3 class="sheet-title">Locais de Apoio Oficiais</h3>
+            <p class="sheet-desc">Toque em um local para ligar ou ver como chegar.</p>
 
             <div class="lista-locais">
-                <div class="local-card">
-                    <div class="local-icon-box">
+
+                <a href="tel:1532710473" class="local-card" title="Ligar para a DDM">
+                    <div class="local-icon-box bg-pink">
                         <i class="fa-solid fa-building-shield"></i>
                     </div>
                     <div class="local-info">
-                        <h4>DEAM - Delegacia da Mulher</h4>
-                        <p>R. das Flores, 123 • 2.5 km</p>
+                        <h4>DDM - Delegacia da Mulher</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> R. Dr. Júlio Prestes, 752 - Centro</p>
+                        <p class="local-phone"><i class="fa-solid fa-phone"></i> (15) 3271-0473</p>
                     </div>
-                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
-                </div>
+                    <i class="fa-solid fa-phone chevron-icon"></i>
+                </a>
 
-                <div class="local-card">
-                    <div class="local-icon-box">
+                <a href="https://www.defensoria.sp.def.br/" target="_blank" class="local-card" title="Ver no Mapa">
+                    <div class="local-icon-box bg-purple">
                         <i class="fa-solid fa-scale-balanced"></i>
                     </div>
                     <div class="local-info">
                         <h4>Defensoria Pública</h4>
-                        <p>Av. Principal, 450 • 4.0 km</p>
+                        <p><i class="fa-solid fa-location-dot"></i> R. Monsenhor Soares, 126 - Centro</p>
+                        <p class="local-phone"><i class="fa-solid fa-phone"></i> 0800 773 4340</p>
                     </div>
-                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
-                </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square chevron-icon"></i>
+                </a>
 
-                <div class="local-card">
-                    <div class="local-icon-box">
-                        <i class="fa-solid fa-house-chimney-medical"></i>
+                <a href="tel:1532711718" class="local-card" title="Ligar para o CREAS">
+                    <div class="local-icon-box bg-orange">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
                     </div>
                     <div class="local-info">
-                        <h4>Centro de Referência (CRAM)</h4>
-                        <p>Rua da Paz, 89 • 5.2 km</p>
+                        <h4>CREAS Itapetininga</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Av. Padre Antônio Brunetti, 1021</p>
+                        <p class="local-phone"><i class="fa-solid fa-phone"></i> (15) 3271-1718</p>
                     </div>
-                    <i class="fa-solid fa-chevron-right chevron-icon"></i>
-                </div>
+                    <i class="fa-solid fa-phone chevron-icon"></i>
+                </a>
+
+                <a href="https://www.oabsp.org.br/subsecao/itapetininga" target="_blank" class="local-card" title="Ver no Mapa">
+                    <div class="local-icon-box bg-grey">
+                        <i class="fa-solid fa-gavel"></i>
+                    </div>
+                    <div class="local-info">
+                        <h4>OAB (Assistência Judiciária)</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> R. João Adolfo, 137 - Centro</p>
+                        <p class="local-phone"><i class="fa-solid fa-phone"></i> (15) 3271-1555</p>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square chevron-icon"></i>
+                </a>
+
             </div>
         </section>
 

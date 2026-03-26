@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apoio Seguro - Dicionário Jurídico</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="CSS_paste/global.css">
+    <link rel="stylesheet" href="CSS_paste/dicionario.css">
 </head>
 
 <body class="app-body">
@@ -16,11 +19,14 @@
 
     <main class="app-container bg-light-pink-container">
 
-        <header class="app-header header-simples">
+        <header class="welcome-header dic-header">
             <div class="header-title-row">
-                <a href="dashboard.html" class="btn-voltar-icon"><i class="fa-solid fa-arrow-left"></i></a>
+                <a href="dashboard.html" class="btn-voltar-icon" aria-label="Voltar para Início">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
                 <h2>Dicionário Jurídico</h2>
             </div>
+            <p class="header-subtitle">Conheça seus direitos e os termos legais importantes.</p>
         </header>
 
         <div class="search-container-dic">
@@ -30,36 +36,79 @@
             </div>
         </div>
 
+        <section class="filtros-container">
+            <button class="btn-filtro active" data-filter="todos">Todos</button>
+            <button class="btn-filtro" data-filter="violencia">Violência</button>
+            <button class="btn-filtro" data-filter="direito">Direitos</button>
+            <button class="btn-filtro" data-filter="abuso">Abuso/Controle</button>
+        </section>
+
         <section class="dicionario-lista" id="dicionarioLista">
 
-            <div class="dic-card border-pink">
+            <div class="dic-card" data-category="direito">
+                <div class="dic-card-header bg-pink"></div>
                 <h3 class="dic-title">Medida Protetiva</h3>
-                <p class="dic-desc">Ordem judicial para proteger mulheres em situação de risco, obrigando o agressor a manter distância.</p>
+                <p class="dic-desc">Ordem judicial para proteger mulheres em situação de risco, obrigando o agressor a manter distância ou proibindo contato.</p>
             </div>
 
-            <div class="dic-card border-purple">
+            <div class="dic-card" data-category="violencia abuso">
+                <div class="dic-card-header bg-purple"></div>
                 <h3 class="dic-title">Violência Patrimonial</h3>
                 <p class="dic-desc">Quando o agressor controla, destrói ou retém o dinheiro, documentos ou bens da mulher.</p>
             </div>
 
-            <div class="dic-card border-orange">
+            <div class="dic-card" data-category="direito">
+                <div class="dic-card-header bg-orange"></div>
                 <h3 class="dic-title">Pensão Alimentícia</h3>
                 <p class="dic-desc">Valor pago para garantir o sustento dos filhos, cobrindo alimentação, moradia, saúde e educação.</p>
             </div>
 
-            <div class="dic-card border-red">
+            <div class="dic-card" data-category="violencia">
+                <div class="dic-card-header bg-red"></div>
                 <h3 class="dic-title">Violência Física</h3>
                 <p class="dic-desc">Qualquer conduta que ofenda a integridade ou saúde corporal da mulher (como empurrões, tapas ou socos).</p>
             </div>
 
-            <div class="dic-card border-light-pink">
+            <div class="dic-card" data-category="violencia abuso">
+                <div class="dic-card-header bg-light-pink"></div>
                 <h3 class="dic-title">Violência Psicológica</h3>
                 <p class="dic-desc">Qualquer ação que cause dano emocional, diminuição da autoestima, manipulação, ameaça ou controle constante.</p>
             </div>
 
-            <div class="dic-card border-grey">
+            <div class="dic-card" data-category="violencia">
+                <div class="dic-card-header bg-grey"></div>
                 <h3 class="dic-title">Violência Moral</h3>
                 <p class="dic-desc">Qualquer conduta que configure calúnia (acusação falsa), difamação ou injúria (xingamentos) contra a mulher.</p>
+            </div>
+
+            <div class="dic-card" data-category="violencia abuso">
+                <div class="dic-card-header bg-red"></div>
+                <h3 class="dic-title">Violência Sexual</h3>
+                <p class="dic-desc">Qualquer conduta que force presenciar, manter ou participar de relação sexual não desejada, ou que impeça o uso de métodos contraceptivos.</p>
+            </div>
+
+            <div class="dic-card" data-category="abuso">
+                <div class="dic-card-header bg-purple"></div>
+                <h3 class="dic-title">Gaslighting</h3>
+                <p class="dic-desc">Forma de manipulação psicológica onde o agressor faz a vítima duvidar de sua própria memória, percepção ou sanidade.</p>
+            </div>
+
+            <div class="dic-card" data-category="direito">
+                <div class="dic-card-header bg-orange"></div>
+                <h3 class="dic-title">Guarda Compartilhada</h3>
+                <p class="dic-desc">Responsabilidade conjunta do pai e da mãe na tomada de decisões importantes sobre a vida dos filhos.</p>
+            </div>
+
+            <div class="dic-card" data-category="direito">
+                <div class="dic-card-header bg-light-pink"></div>
+                <h3 class="dic-title">Defensoria Pública</h3>
+                <p class="dic-desc">Órgão do Estado que oferece assistência jurídica gratuita para quem não tem condições de pagar um advogado.</p>
+            </div>
+
+            <div class="dic-card" data-category="abuso">
+                <div class="dic-card-header bg-grey"></div>
+                <h3 class="dic-title">Estupro Marital</h3>
+                <p class="dic-desc">Relação sexual forçada ou sem consentimento praticada pelo próprio cônjuge ou parceiro íntimo. É crime.</p>
             </div>
 
         </section>

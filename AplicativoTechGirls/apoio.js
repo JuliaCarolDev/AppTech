@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.replace(safeUrl);
     }
 
-    quickExitBtn.addEventListener('click', executeQuickExit);
+    if (quickExitBtn) {
+        quickExitBtn.addEventListener('click', executeQuickExit);
+    }
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') executeQuickExit();
@@ -17,11 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Simulação de Busca no Mapa ---
     const textoBuscando = document.getElementById('textoBuscando');
     const badgeBuscando = document.getElementById('badgeBuscando');
+    const iconeBuscando = badgeBuscando.querySelector('i');
 
-    // Após 2.5 segundos, muda o texto simulando que o GPS encontrou a localização
+    // Após 1.5 segundos, muda o texto simulando que o GPS encontrou Itapetininga
     setTimeout(() => {
-        textoBuscando.textContent = "Rede encontrada na sua região";
-        badgeBuscando.style.color = "#16a34a"; // Muda o texto para verde (sucesso)
-        badgeBuscando.querySelector('i').style.color = "#16a34a";
-    }, 2500);
+        textoBuscando.textContent = "Rede de Itapetininga encontrada";
+
+        // Remove a animação de girar
+        iconeBuscando.classList.remove('icon-spin', 'fa-location-crosshairs');
+        iconeBuscando.classList.add('fa-check'); // Muda para ícone de check
+
+        // Estilo de sucesso (Verde suave)
+        badgeBuscando.style.backgroundColor = "#e8f5e9";
+        badgeBuscando.style.color = "#2e7d32";
+        badgeBuscando.style.border = "1px solid #c8e6c9";
+        iconeBuscando.style.color = "#2e7d32";
+    }, 1500);
 });

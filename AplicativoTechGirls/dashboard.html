@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apoio Seguro - Início</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="CSS_paste/global.css">
+    <link rel="stylesheet" href="CSS_paste/dashboard.css">
 </head>
 
 <body class="app-body">
@@ -14,19 +17,51 @@
         Saída Rápida (Esc)
     </button>
 
-    <main class="app-container">
-        <header class="app-header">
-            <div class="header-content">
-                <h2>Seus direitos de forma simples e segura</h2>
-                <button id="btnSobreNos" class="btn-sobre-nos">Sobre nós</button>
+    <main class="app-container bg-light-pink-container">
+
+        <header class="welcome-header">
+            <div class="header-top">
+                <h2>Olá! Bem-vinda ao seu espaço seguro.</h2>
+                <button id="btnSobreNos" class="btn-sobre-nos-sm">Sobre nós</button>
+            </div>
+
+            <div class="carousel-container">
+                <div class="carousel-slides" id="carouselSlides">
+
+                    <div class="slide">
+                        <div class="slide-icon bg-pink"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                        <div class="slide-content">
+                            <h3>Navegue com Discrição</h3>
+                            <p>Use o Dicionário e o Guia para se informar. O botão "Saída Rápida" (Esc) fecha o site instantaneamente.</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="slide-icon bg-red"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <div class="slide-content">
+                            <h3>Em Caso de Perigo</h3>
+                            <p>O botão "Emergência" tem um discador rápido para o 190 e envia sua localização para contatos de confiança.</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <div class="slide-icon bg-purple"><i class="fa-solid fa-mask"></i></div>
+                        <div class="slide-content">
+                            <h3>Proteja sua Privacidade</h3>
+                            <p>No menu "Mais", ative a Camuflagem para disfarçar este app como um site de receitas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-dots" id="carouselDots"></div>
             </div>
         </header>
 
-        <div class="search-container">
-            <div class="search-bar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Ex: pensão, assédio, medida protetiva...">
+        <div class="search-container-landing">
+            <div class="search-bar-white">
+                <i class="fa-solid fa-magnifying-glass text-pink"></i>
+                <input type="text" id="searchInput" placeholder="O que você precisa saber hoje?" autocomplete="off">
             </div>
+            <ul id="searchResults" class="search-results-dropdown" style="display: none;"></ul>
         </div>
 
         <section class="grid-menu">
@@ -64,33 +99,33 @@
         <section class="support-network">
             <div class="support-header">
                 <div>
-                    <span class="subtitle">Rede de Apoio</span>
-                    <h3>Recomendado</h3>
+                    <span class="subtitle">Perto de Você (Itapetininga-SP)</span>
+                    <h3>Locais de Apoio Oficial</h3>
                 </div>
-                <a href="#" class="see-all">Ver Todos</a>
             </div>
 
             <div class="cards-desktop-grid">
-                <div class="support-card card-deam">
+                <a href="https://mulher.podemos.org.br/store/delegacia-de-defesa-da-mulher-itapetininga/" target="_blank" class="support-card card-ddm-itape" title="Ver informações da DDM">
                     <div class="card-content">
-                        <h4>DEAM Centro</h4>
+                        <h4>DDM - Delegacia da Mulher</h4>
                         <div class="card-info">
-                            <span><i class="fa-solid fa-location-dot"></i> A 2.5 km</span>
-                            <span class="status">24h</span>
+                            <span><i class="fa-solid fa-phone"></i> (15) 3271-0473</span>
+                            <span class="status">Polícia Civil</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="support-card card-defensoria">
+                <a href="https://previdencia.social/endereco-e-telefone-assistente-social-creas-de-itapetininga-sp/" target="_blank" class="support-card card-creas-itape" title="Ver informações do CREAS">
                     <div class="card-content">
-                        <h4>Defensoria</h4>
+                        <h4>CREAS Itapetininga</h4>
                         <div class="card-info">
-                            <span><i class="fa-solid fa-location-dot"></i> A 4.0 km</span>
-                            <span class="status">Aberto</span>
+                            <span><i class="fa-solid fa-location-dot"></i> Av. Padre Antônio Brunetti</span>
+                            <span class="status">Apoio Social</span>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
+            <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-muted);">*Toque nos cartões para ver mais detalhes e informações.</p>
         </section>
     </main>
 

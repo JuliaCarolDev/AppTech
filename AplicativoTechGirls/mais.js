@@ -1,19 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- Lógica de Saída Rápida ---
-    const quickExitBtn = document.getElementById('quickExitBtn');
     const safeUrl = 'https://www.google.com.br';
 
     function executeQuickExit() { window.location.replace(safeUrl); }
-    quickExitBtn.addEventListener('click', executeQuickExit);
+
+    const quickExitBtn = document.getElementById('quickExitBtn');
+    if (quickExitBtn) quickExitBtn.addEventListener('click', executeQuickExit);
     document.addEventListener('keydown', (event) => { if (event.key === 'Escape') executeQuickExit(); });
+
+    // --- Lógica de Carregar Perfil da Usuária ---
+    const nomeDisplay = document.getElementById('nomeUsuarioDisplay');
+    const pinDisplay = document.getElementById('pinUsuarioDisplay');
+
+    if (nomeDisplay && pinDisplay) {
+        const nomeSalvo = localStorage.getItem('apoioSeguroUser');
+
+        if (nomeSalvo && nomeSalvo !== 'Acesso Anônimo') {
+            nomeDisplay.textContent = `${nomeSalvo} (Apelido)`;
+            pinDisplay.textContent = "PIN de Segurança: ••••";
+        } else {
+            nomeDisplay.textContent = "Acesso Anônimo";
+            pinDisplay.textContent = "Sem PIN configurado";
+        }
+    }
 
     // --- Lógica de Sair da Conta ---
     const btnSairConta = document.getElementById('btnSairConta');
     if (btnSairConta) {
         btnSairConta.addEventListener('click', () => {
-            if (confirm("Tem certeza que deseja sair com segurança?")) {
-                // Redireciona de volta para a tela de login
+            if (confirm("Tem certeza que deseja sair e bloquear o aplicativo?")) {
                 window.location.href = "index.html";
             }
         });
@@ -23,31 +39,44 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnLimparRastros = document.getElementById('btnLimparRastros');
     if (btnLimparRastros) {
         btnLimparRastros.addEventListener('click', () => {
-            alert("Rastros locais apagados com sucesso! Seu histórico neste aplicativo está limpo.");
+            localStorage.clear();
+            alert("Rastros locais apagados com sucesso!");
+            window.location.reload();
         });
     }
 
-    // --- Lógica da Camuflagem ---
+    // --- Camuflagem Total ---
     const toggleCamuflagem = document.getElementById('toggleCamuflagem');
+    const safeArea = document.getElementById('safeArea');
+    const recipeArea = document.getElementById('recipeArea');
+    const btnDescamuflar = document.getElementById('btnDescamuflar');
 
-    toggleCamuflagem.addEventListener('change', function() {
-        if (this.checked) {
-            // Ativou a camuflagem
-            alert("Camuflagem Ativada! O nome da aba e as cores mudarão para disfarçar o aplicativo. Para acessar a área segura novamente, você precisará digitar seu PIN.");
+    if (toggleCamuflagem) {
+        toggleCamuflagem.addEventListener('change', function() {
+            if (this.checked) {
+                document.title = "Cozinha & Cia - Receitas";
+                document.body.style.background = "#f9fafb";
 
-            // Simulação de camuflagem (muda o título da aba do navegador)
-            document.title = "Receitas Rápidas e Fáceis";
+                safeArea.style.display = "none";
+                recipeArea.style.display = "block";
+            }
+        });
+    }
 
-            // Muda a cor do cabeçalho para uma cor neutra de site de receitas (laranja/amarelo)
-            document.querySelector('.header-cinza').style.backgroundColor = "#fb923c";
-            document.querySelector('.header-cinza h2').textContent = "Receitas";
+    if (btnDescamuflar) {
+        btnDescamuflar.addEventListener('click', () => {
+            const senha = prompt("Modo Seguro. Digite seu PIN de 4 dígitos para voltar:");
 
-        } else {
-            // Desativou a camuflagem
-            document.title = "Apoio Seguro - Mais Opções";
-            document.querySelector('.header-cinza').style.backgroundColor = "var(--icon-grey)";
-            document.querySelector('.header-cinza h2').textContent = "Configurações";
-            alert("Camuflagem Desativada. Visual original restaurado.");
-        }
-    });
+            if (senha && senha.length === 4) {
+                document.title = "Apoio Seguro - Configurações";
+                document.body.style.background = "";
+
+                recipeArea.style.display = "none";
+                safeArea.style.display = "block";
+                toggleCamuflagem.checked = false;
+            } else if (senha !== null) {
+                alert("PIN incorreto.");
+            }
+        });
+    }
 });

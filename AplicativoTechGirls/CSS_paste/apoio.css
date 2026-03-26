@@ -1,0 +1,252 @@
+/* ==========================================================
+   TELA APOIO PERTO (apoio.html)
+========================================================== */
+
+
+/* Fundo da aplicação */
+
+.bg-light-pink-container {
+    background: linear-gradient(180deg, #fffafb 0%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+
+/* Cabeçalho padronizado */
+
+.header-padrao {
+    background: linear-gradient(135deg, var(--primary-color), var(--header-purple));
+    color: white;
+    padding: 40px 30px 60px 30px;
+    border-radius: 0 0 30px 30px;
+}
+
+.header-title-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.btn-voltar-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.btn-voltar-icon:hover {
+    transform: translateX(-5px);
+}
+
+.header-padrao h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.header-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-left: 35px;
+}
+
+
+/* Área do Mapa */
+
+.mapa-container {
+    height: 250px;
+    margin-top: -30px;
+    /* Sobe um pouco sob o cabeçalho */
+    background-color: #e5e5f7;
+    background-image: url('https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=1000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    border-radius: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.mapa-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Overlay suave */
+    border-radius: 30px;
+    z-index: -1;
+}
+
+
+/* Botão Flutuante de Busca */
+
+.badge-buscando {
+    background-color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    color: #d81b60;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 0 8px 25px rgba(216, 27, 96, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 192, 203, 0.4);
+}
+
+
+/* Animação para o ícone buscando */
+
+.icon-spin {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Bottom Sheet (Área Branca Inferior) */
+
+.bottom-sheet {
+    background-color: transparent;
+    padding: 30px 20px 50px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.sheet-title {
+    color: #d81b60;
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.sheet-desc {
+    color: #7a5e65;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+
+/* Lista de locais */
+
+.lista-locais {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* Agora os cards são links (tags a) */
+
+.local-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(147, 51, 234, 0.06);
+    border: 1px solid rgba(255, 192, 203, 0.3);
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.local-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(216, 27, 96, 0.15);
+}
+
+
+/* Ícones coloridos seguindo o padrão */
+
+.local-icon-box {
+    width: 55px;
+    height: 55px;
+    border-radius: 35%;
+    /* Squircle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.bg-pink {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    color: #d81b60;
+}
+
+.bg-purple {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.bg-orange {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}
+
+.bg-grey {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.local-info {
+    margin-left: 15px;
+    flex-grow: 1;
+    /* Ocupa o espaço restante */
+}
+
+.local-info h4 {
+    color: #d81b60;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.local-info p {
+    color: #5d4037;
+    font-size: 0.85rem;
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.local-info p i {
+    color: #f48fb1;
+    /* Rosa clarinho pros ícones pequenos */
+    width: 12px;
+}
+
+.local-phone {
+    font-weight: 600;
+    color: #ad1457 !important;
+    /* Destaque para o telefone */
+}
+
+
+/* Ícone de ação na direita */
+
+.chevron-icon {
+    color: #f8bbd0;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #fffafb;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.local-card:hover .chevron-icon {
+    background-color: #fce4ec;
+    color: #d81b60;
+}

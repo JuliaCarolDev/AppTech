@@ -8,7 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.replace(safeUrl);
     }
 
-    quickExitBtn.addEventListener('click', executeQuickExit);
+    if (quickExitBtn) {
+        quickExitBtn.addEventListener('click', executeQuickExit);
+    }
 
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') executeQuickExit();
@@ -17,15 +19,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Lógica do Botão Pedir Ajuda ---
     const btnPedirAjuda = document.getElementById('btnPedirAjuda');
     const descricao = document.querySelector('.panico-descricao');
+    const pulseRings = document.querySelectorAll('.pulse-ring');
     let isSosActive = false;
 
     btnPedirAjuda.addEventListener('click', () => {
         if (!isSosActive) {
             isSosActive = true;
 
+            // Para a animação pulsante para focar no envio
+            pulseRings.forEach(ring => ring.style.display = 'none');
+
             // Muda o visual para indicar que está enviando
             btnPedirAjuda.classList.add('enviando');
-            btnPedirAjuda.innerHTML = '<i class="fa-solid fa-location-dot"></i><span>ENVIANDO...</span>';
+            btnPedirAjuda.innerHTML = '<i class="fa-solid fa-location-dot fa-beat-fade"></i><span>ENVIANDO...</span>';
             descricao.textContent = "Obtendo localização e enviando o alerta silenciosamente...";
 
             // Simula o tempo de busca do GPS (3 segundos)
@@ -35,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 btnPedirAjuda.innerHTML = '<i class="fa-solid fa-check"></i><span>ENVIADO</span>';
 
                 descricao.textContent = "Alerta enviado com sucesso aos seus contatos de confiança.";
-                descricao.style.color = "#d32f2f";
+                document.querySelector('.info-box').style.borderColor = "#10b981";
+                document.querySelector('.info-icon').style.color = "#10b981";
             }, 3000);
         }
     });

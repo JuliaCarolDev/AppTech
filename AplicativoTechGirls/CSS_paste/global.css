@@ -1,0 +1,239 @@
+/* ==========================================================
+   VARIÁVEIS GLOBAIS E PALETA DE CORES
+========================================================== */
+
+:root {
+    --bg-color: #f8f9fb;
+    --card-bg: #ffffff;
+    --primary-color: #f44c88;
+    --primary-dark: #d81b60;
+    --header-purple: #9a2b9e;
+    --text-main: #2d3748;
+    --text-muted: #4a5568;
+    --danger-color: #dc2626;
+    --danger-hover: #b91c1c;
+    /* Cores dos Ícones e Bordas */
+    --icon-pink: #ec4899;
+    --icon-purple: #9333ea;
+    --icon-red: #dc2626;
+    --icon-orange: #f97316;
+    --icon-light-pink: #f472b6;
+    --icon-grey: #9ca3af;
+}
+
+
+/* ==========================================================
+   RESET E CONFIGURAÇÕES BÁSICAS
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/* ==========================================================
+   BOTÃO DE SAÍDA RÁPIDA (Presente em todas as telas)
+========================================================== */
+
+.quick-exit-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.quick-exit-btn:hover {
+    background-color: var(--danger-hover);
+}
+
+
+/* ==========================================================
+   ESTRUTURA BASE DO APLICATIVO (Telas Internas)
+========================================================== */
+
+.app-body {
+    background-color: #eaeef3;
+    padding: 20px;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    min-height: calc(100vh - 40px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+    position: relative;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+
+/* Utilitários de Fundo (Usados em várias telas) */
+
+.bg-light-pink-container {
+    background-color: #fdf2f8;
+}
+
+.bg-light-orange-container {
+    background-color: #fff7ed;
+}
+
+.bg-light-red-container {
+    background-color: #fef2f2;
+}
+
+.no-padding-bottom {
+    padding-bottom: 0;
+}
+
+
+/* ==========================================================
+   CABEÇALHOS (HEADERS) PADRÕES E CORES
+========================================================== */
+
+.app-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 50px 40px 60px 40px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.header-simples {
+    padding: 30px 40px 50px 40px;
+}
+
+.header-roxa {
+    background-color: var(--header-purple);
+    padding: 30px 40px;
+}
+
+.header-laranja {
+    background-color: var(--icon-orange);
+    padding: 30px 40px;
+}
+
+.header-ligar {
+    background-color: var(--icon-light-pink);
+    padding: 30px 40px;
+}
+
+.header-panico {
+    background-color: #ce3030;
+    padding: 30px 40px;
+}
+
+.header-emergencia {
+    background-color: #b91c1c;
+    padding: 30px 40px;
+}
+
+.header-cinza {
+    background-color: var(--icon-grey);
+    padding: 30px 40px;
+    transition: background-color 0.5s ease;
+}
+
+.header-title-row {
+    display: flex;
+    align-items: center;
+}
+
+.btn-voltar-icon {
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: opacity 0.2s;
+}
+
+.btn-voltar-icon:hover {
+    opacity: 0.8;
+}
+
+.header-title-row h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   UTILITÁRIOS GERAIS
+========================================================== */
+
+
+/* Divisor Horizontal */
+
+.divisor {
+    border: 0;
+    height: 1px;
+    background: #e5e7eb;
+    margin: 30px 0;
+}
+
+
+/* ==========================================================
+   CORES DE FUNDO DOS ÍCONES (Classes Utilitárias)
+========================================================== */
+
+.bg-pink {
+    background-color: var(--icon-pink);
+}
+
+.bg-purple {
+    background-color: var(--icon-purple);
+}
+
+.bg-red {
+    background-color: var(--icon-red);
+}
+
+.bg-orange {
+    background-color: var(--icon-orange);
+}
+
+.bg-light-pink {
+    background-color: var(--icon-light-pink);
+}
+
+.bg-grey {
+    background-color: var(--icon-grey);
+}
+
+.bg-green {
+    background-color: #16a34a;
+}
+
+.bg-dark {
+    background-color: #1f2937;
+}

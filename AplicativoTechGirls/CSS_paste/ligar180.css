@@ -1,0 +1,124 @@
+/* ==========================================================
+   TELA LIGAR 180 (ligar180.html)
+   (Requer global.css para a estrutura base)
+========================================================== */
+
+.ligar-content {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Cartão Central */
+
+.ligar-card {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(244, 114, 182, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ligar-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background-color: #fdf2f8;
+    color: var(--icon-light-pink);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.ligar-card h3 {
+    color: var(--text-main);
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+}
+
+
+/* Lista de Informações (Checkmarks) */
+
+.ligar-info-texto {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.ligar-info-texto p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.ligar-info-texto i {
+    color: #10b981;
+    /* Check verde */
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+
+/* Caixa de Alerta Vermelha para o 190 */
+
+.alerta-190 {
+    background-color: #fef2f2;
+    border-left: 4px solid #ef4444;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.alerta-190 i {
+    color: #ef4444;
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.alerta-190 span {
+    color: #991b1b;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+
+/* Botão de Ligar */
+
+.btn-call-180 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--icon-light-pink);
+    color: white;
+    text-decoration: none;
+    padding: 18px 20px;
+    width: 100%;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(244, 114, 182, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-call-180 i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.btn-call-180:hover {
+    transform: translateY(-3px);
+    background-color: #db2777;
+}
