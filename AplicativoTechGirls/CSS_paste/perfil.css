@@ -1,0 +1,320 @@
+/* ==========================================================
+   TELA DE EDITAR PERFIL (perfil.html)
+========================================================== */
+
+
+/* Fundo da aplicação */
+
+.bg-light-purple-container {
+    background: linear-gradient(180deg, #f5f3ff 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Cabeçalho Roxo Elegante */
+
+.header-roxa {
+    background: linear-gradient(135deg, #a855f7, #7e22ce);
+    color: white;
+    padding: 40px 30px 60px 30px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 10px 20px rgba(126, 34, 206, 0.15);
+    flex-shrink: 0;
+}
+
+.header-title-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.btn-voltar-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.btn-voltar-icon:hover {
+    transform: translateX(-5px);
+}
+
+.header-roxa h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.header-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-left: 35px;
+}
+
+
+/* Área de Conteúdo */
+
+.perfil-content {
+    padding: 0 30px 40px 30px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 10;
+    flex-grow: 1;
+}
+
+
+/* Box de Informação */
+
+.info-box-perfil {
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 20px;
+    border: 1px solid #e9d5ff;
+    /* Roxo clarinho */
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(147, 51, 234, 0.08);
+}
+
+.info-icon-perfil {
+    color: #a855f7;
+    font-size: 1.5rem;
+    margin-top: 2px;
+}
+
+.perfil-descricao {
+    color: #5d4037;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 0;
+}
+
+
+/* Formulário Card */
+
+.form-perfil-card {
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(147, 51, 234, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* Foto/Avatar decorativo centralizado */
+
+.avatar-edit-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #d8b4fe 0%, #a855f7 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
+}
+
+
+/* Campos de Input */
+
+.input-group label {
+    display: block;
+    color: #4c1d95;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    margin-left: 5px;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper .input-icon {
+    position: absolute;
+    left: 15px;
+    color: #c4b5fd;
+    font-size: 1.1rem;
+}
+
+.toggle-senha {
+    position: absolute;
+    right: 15px;
+    color: #9ca3af;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 10px;
+    /* Aumenta a área de clique */
+}
+
+.toggle-senha:hover {
+    color: #a855f7;
+}
+
+.input-estilizado {
+    width: 100%;
+    padding: 15px 45px;
+    border: 2px solid #ede9fe;
+    border-radius: 15px;
+    font-size: 1rem;
+    color: #4b5563;
+    background-color: #faf5ff;
+    transition: all 0.3s ease;
+}
+
+.input-estilizado:focus {
+    outline: none;
+    border-color: #a855f7;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.1);
+}
+
+
+/* Botão Salvar */
+
+.btn-salvar-perfil {
+    background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-salvar-perfil:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+}
+
+
+/* ==========================================================
+   MODAL CUSTOMIZADO DE SUCESSO
+========================================================== */
+
+.custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 25px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    animation: modalPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalPop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.bg-green {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+}
+
+.modal-content h3 {
+    color: #065f46;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.modal-content p {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.modal-actions {
+    display: flex;
+    width: 100%;
+}
+
+.btn-confirmar-verde {
+    flex: 1;
+    padding: 14px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.3);
+}
+
+.btn-confirmar-verde:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+}

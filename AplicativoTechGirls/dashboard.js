@@ -20,8 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnSobreNos = document.getElementById('btnSobreNos');
     if (btnSobreNos) {
         btnSobreNos.addEventListener('click', () => {
-            console.log("Abrindo página Sobre Nós...");
-            alert("Em breve: Página com informações sobre a iniciativa e equipe.");
+            window.location.href = "sobre.html";
         });
     }
 
@@ -38,8 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const btnGuia = document.getElementById('btnGuia');
     if (btnGuia) btnGuia.addEventListener('click', () => window.location.href = "guia.html");
 
-    const btnLigar180 = document.getElementById('btnLigar180');
-    if (btnLigar180) btnLigar180.addEventListener('click', () => window.location.href = "ligar180.html");
+    // NOVO BOTÃO REDIRECIONANDO PARA A PÁGINA DO IFSP
+    const btnApoioIFSP = document.getElementById('btnApoioIFSP');
+    if (btnApoioIFSP) btnApoioIFSP.addEventListener('click', () => window.location.href = "apoio_ifsp.html");
 
     const btnMais = document.getElementById('btnMais');
     if (btnMais) btnMais.addEventListener('click', () => window.location.href = "mais.html");
@@ -48,14 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');
     const searchResults = document.getElementById('searchResults');
 
-    // Lista de telas com ícones adicionados
+    // Lista de telas atualizada com o IFSP
     const rotasApp = [
         { termo: "Camuflagem do app", url: "mais.html", icon: "fa-solid fa-mask" },
         { termo: "Dicionário", url: "dicionario.html", icon: "fa-solid fa-book" },
         { termo: "Apoio Perto", url: "apoio.html", icon: "fa-solid fa-map-location-dot" },
         { termo: "Emergência", url: "emergencia.html", icon: "fa-solid fa-triangle-exclamation" },
         { termo: "Guia Seguro", url: "guia.html", icon: "fa-solid fa-shield-halved" },
-        { termo: "Ligar 180", url: "ligar180.html", icon: "fa-solid fa-phone" },
+        { termo: "Apoio IFSP", url: "apoio_ifsp.html", icon: "fa-solid fa-school" },
         { termo: "Gerenciar perfil", url: "perfil.html", icon: "fa-solid fa-user-gear" },
         { termo: "Contatos de segurança", url: "contatos.html", icon: "fa-solid fa-user-shield" }
     ];
@@ -63,21 +63,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (searchInput && searchResults) {
         searchInput.addEventListener('input', function() {
             const query = this.value.toLowerCase();
-            searchResults.innerHTML = ''; // Limpa os resultados anteriores
+            searchResults.innerHTML = '';
 
             if (query.length > 0) {
-                // Filtra as opções que contém o que foi digitado
                 const filtrados = rotasApp.filter(item => item.termo.toLowerCase().includes(query));
 
                 if (filtrados.length > 0) {
                     searchResults.style.display = 'block';
 
-                    // Cria os itens da lista com HTML para incluir o ícone
                     filtrados.forEach(item => {
                         const li = document.createElement('li');
                         li.innerHTML = `<i class="${item.icon}"></i> <span>${item.termo}</span>`;
 
-                        // Redireciona ao clicar
                         li.addEventListener('click', () => {
                             window.location.href = item.url;
                         });
@@ -88,11 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     searchResults.style.display = 'none';
                 }
             } else {
-                searchResults.style.display = 'none'; // Esconde se apagar o texto
+                searchResults.style.display = 'none';
             }
         });
 
-        // Esconder a lista se clicar fora da barra de pesquisa
         document.addEventListener('click', (e) => {
             if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
                 searchResults.style.display = 'none';

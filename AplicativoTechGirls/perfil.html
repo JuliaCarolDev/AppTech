@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio Seguro - Editar Perfil</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS_paste/global.css">
+    <link rel="stylesheet" href="CSS_paste/perfil.css">
+</head>
+
+<body class="app-body">
+
+    <button id="quickExitBtn" class="quick-exit-btn" aria-label="Sair rapidamente do site">
+        Saída Rápida (Esc)
+    </button>
+
+    <main class="app-container bg-light-purple-container">
+        <header class="app-header header-roxa">
+            <div class="header-title-row">
+                <a href="mais.html" class="btn-voltar-icon"><i class="fa-solid fa-arrow-left"></i></a>
+                <h2>Editar Perfil</h2>
+            </div>
+            <p class="header-subtitle">Atualize seu nome de acesso e seu PIN de segurança.</p>
+        </header>
+
+        <section class="perfil-content">
+
+            <div class="info-box-perfil">
+                <i class="fa-solid fa-user-shield info-icon-perfil"></i>
+                <p class="perfil-descricao">
+                    Use um apelido discreto. O seu PIN de 4 dígitos é usado para destrancar o aplicativo quando a camuflagem estiver ativada.
+                </p>
+            </div>
+
+            <form id="formPerfil" class="form-perfil-card">
+
+                <div class="avatar-edit-container">
+                    <div class="avatar-circle">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="nomeEdit">Apelido ou Nome</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input type="text" id="nomeEdit" class="input-estilizado" placeholder="Como deseja ser chamada?" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="pinEdit">Novo PIN de Segurança</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" id="pinEdit" class="input-estilizado" placeholder="Apenas 4 números" inputmode="numeric" maxlength="4" required>
+                        <i class="fa-solid fa-eye-slash toggle-senha" id="btnMostrarSenha" title="Mostrar/Ocultar"></i>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-salvar-perfil">
+                    <i class="fa-solid fa-check"></i> Salvar Alterações
+                </button>
+            </form>
+
+        </section>
+
+        <div id="modalSucesso" class="custom-modal" style="display: none;">
+            <div class="modal-overlay"></div>
+            <div class="modal-content">
+                <div class="modal-icon bg-green">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3>Perfil Atualizado!</h3>
+                <p>Seus dados foram salvos com sucesso no seu aparelho.</p>
+                <div class="modal-actions">
+                    <button id="btnOkSucesso" class="btn-confirmar-verde">Entendi</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="perfil.js"></script>
+</body>
+
+</html>

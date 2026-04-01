@@ -429,3 +429,184 @@ input:checked+.slider:before {
 .recipe-info p i {
     color: #ea580c;
 }
+
+
+/* ==========================================================
+   MODAL CUSTOMIZADO (Limpar Rastros)
+========================================================== */
+
+.custom-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    /* Embaça o fundo do app */
+}
+
+.modal-content {
+    position: relative;
+    background-color: white;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 25px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    animation: modalPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Animação de pulinho */
+}
+
+@keyframes modalPop {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    color: white;
+    box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3);
+}
+
+.modal-content h3 {
+    color: #4c1d95;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.modal-content p {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-cancelar {
+    flex: 1;
+    padding: 12px;
+    border-radius: 15px;
+    border: 1px solid #e5e7eb;
+    background: white;
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-cancelar:hover {
+    background: #f3f4f6;
+}
+
+.btn-confirmar {
+    flex: 1;
+    padding: 12px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 5px 15px rgba(217, 119, 6, 0.3);
+}
+
+.btn-confirmar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.4);
+}
+
+
+/* ==========================================================
+   ESTILOS ESPECÍFICOS DO MODAL DE PIN (Descamuflar)
+========================================================== */
+
+
+/* Campo de digitar a senha */
+
+.pin-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+    /* Deixa os pontinhos da senha separados */
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    outline: none;
+    transition: border-color 0.3s;
+    color: #4c1d95;
+}
+
+.pin-input:focus {
+    border-color: #a855f7;
+}
+
+
+/* Mensagem de Erro */
+
+.erro-msg {
+    color: #e11d48 !important;
+    font-size: 0.85rem !important;
+    margin-top: -5px !important;
+    margin-bottom: 15px !important;
+    display: none;
+    font-weight: 500;
+}
+
+
+/* Botão de Confirmar Roxo */
+
+.btn-confirmar-roxo {
+    flex: 1;
+    padding: 12px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(135deg, #a855f7 0%, #7e22ce 100%);
+    color: white;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 5px 15px rgba(168, 85, 247, 0.3);
+}
+
+.btn-confirmar-roxo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
+}

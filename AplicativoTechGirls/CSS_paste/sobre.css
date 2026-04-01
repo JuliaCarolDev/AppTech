@@ -1,0 +1,230 @@
+/* ==========================================================
+   TELA SOBRE NÓS / TECHTHEMIS (sobre.html)
+========================================================== */
+
+
+/* Fundo suave */
+
+.bg-light-pink-container {
+    background: linear-gradient(180deg, #fffafb 0%, #ffffff 100%);
+    min-height: 100vh;
+}
+
+
+/* Cabeçalho Rosa/Roxo vibrante */
+
+.header-sobre {
+    background: linear-gradient(135deg, #db2777, #9333ea);
+    color: white;
+    padding: 40px 30px 60px 30px;
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 10px 20px rgba(219, 39, 119, 0.15);
+}
+
+.header-title-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.btn-voltar-icon {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.btn-voltar-icon:hover {
+    transform: translateX(-5px);
+}
+
+.header-sobre h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.header-subtitle {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-left: 35px;
+}
+
+
+/* Área de Conteúdo */
+
+.sobre-content {
+    padding: 10px 30px 40px 30px;
+    margin-top: -25px;
+    /* Sobe para sobrepor o cabeçalho */
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* Cards de Informação */
+
+.sobre-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(147, 51, 234, 0.06);
+    border: 1px solid rgba(219, 39, 119, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sobre-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(219, 39, 119, 0.12);
+}
+
+
+/* Ícones dos Cards */
+
+.sobre-icon-box {
+    width: 55px;
+    height: 55px;
+    border-radius: 35%;
+    /* Formato Squircle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Gradientes reaproveitados da identidade */
+
+.bg-purple {
+    background: linear-gradient(135deg, #a855f7, #7e22ce);
+}
+
+.bg-pink {
+    background: linear-gradient(135deg, #f472b6, #db2777);
+}
+
+.bg-orange {
+    background: linear-gradient(135deg, #fbbf24, #d97706);
+}
+
+
+/* Textos */
+
+.sobre-text h3 {
+    color: #4c1d95;
+    /* Roxo escuro */
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sobre-text p {
+    color: #5d4037;
+    /* Marrom/Cinza escuro para boa leitura */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.sobre-text strong {
+    color: #db2777;
+    /* Destaque em rosa */
+}
+
+
+/* ==========================================================
+   NOVA SEÇÃO: QUEM SOMOS (A Equipe)
+========================================================== */
+
+.section-title {
+    color: #db2777;
+    /* Rosa forte */
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin: 15px 0 5px 0;
+    text-align: center;
+}
+
+.equipe-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.integrante-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(147, 51, 234, 0.05);
+    border-left: 4px solid #db2777;
+    /* Borda rosa lateral para destaque */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.integrante-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 20px rgba(219, 39, 119, 0.1);
+}
+
+.integrante-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.integrante-info {
+    flex-grow: 1;
+}
+
+.integrante-info h4 {
+    color: #4c1d95;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.integrante-curso {
+    display: block;
+    color: #db2777;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    background-color: #fdf2f8;
+    /* Fundo rosa clarinho */
+    padding: 3px 8px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.integrante-papel {
+    color: #5d4037;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.linha-divisoria {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(219, 39, 119, 0.2), transparent);
+    margin: 20px 0;
+}
